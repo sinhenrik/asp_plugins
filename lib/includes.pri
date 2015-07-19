@@ -32,11 +32,12 @@ mac {
 # }
 # }
 # 
+
 # # SSE2, faster over size, optimization
-# windows {
-#     QMAKE_CXXFLAGS += /arch:SSE2 /Oi /Ot
-# }
-# 
+windows {
+     QMAKE_CXXFLAGS += /arch:SSE2 /Oi /Ot
+}
+
 
 
 
@@ -61,7 +62,6 @@ CONFIG(debug,debug|release) {
         DESTDIR=../Builds/Linux32/debug
     }
     }
-
 }
 
 CONFIG(release,debug|release) {
