@@ -38,7 +38,7 @@
 #define dePepper dePepperF
 using namespace std;
 
-#define FilterName WaveletSharpenFilter
+#define FilterName sphWaveletSharpenFilter
 
 
 
@@ -98,7 +98,7 @@ static const float sigmoidtable[513] = {
     #include "edgetable.inc"
 };
 
-static const float edgeFunction(const float x)
+static float edgeFunction(const float x)
 {
 
     #define MMAX(a,b) ((a>b)?a:b)

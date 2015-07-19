@@ -37,7 +37,7 @@
 #define dePepper dePepperF
 using namespace std;
 
-#define FilterName LLorensFilter
+#define FilterName sphLLorensFilter
 
 
 
@@ -77,7 +77,9 @@ bool FilterName::needsOriginalImage  ()
 
 int FilterName::additionalRadius(PluginOptionList  *layerOptions,float zoomLevel) const
 {
-    bool okay;
+    Q_UNUSED(layerOptions);
+    Q_UNUSED(zoomLevel);
+    // bool okay;
    /* bool  enable = layerOptions->getBool(Enable, m_groupId, okay);
     float radius = layerOptions->getDouble(Radius, m_groupId, okay)*zoomLevel;
     bool  enable2 = layerOptions->getBool(Enable2, m_groupId, okay);

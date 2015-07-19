@@ -3,15 +3,15 @@
  * (C) 2010
  * licensed: GPL v2+
  */
-#ifndef FILTERLLORENS_H
-#define FILTERLLORENS_H
+#ifndef SPHFILTERLLORENS_H
+#define SPHFILTERLLORENS_H
 
 #include "sphLayerFilter.h"
 
-class LLorensFilter : public sphLayerFilter
+class sphLLorensFilter : public sphLayerFilter
 {
 public:
-	LLorensFilter(PluginHub *hub, int groupId) :sphLayerFilter(hub,groupId,RGB2HCL,GAMMA_ALL){ } ;
+    sphLLorensFilter(PluginHub *hub, int groupId) :sphLayerFilter(hub,groupId,RGB2HCL,GAMMA_ALL){ } ;
 	//virtual ~SharpenFilter() { ; }
 
 	enum OptionNames {

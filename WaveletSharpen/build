@@ -1,3 +1,6 @@
-../lib/buildLinux.sh
-cp libWavelet.so.0.1.0 '/home/spoilerhead/.AfterShotPro/Plugins/WaveletSharpen2.afplugin/lib'
-cp sph_wavelet_sharpen.ui '/home/spoilerhead/.AfterShotPro/Plugins/WaveletSharpen2.afplugin/ui'
+#!/bin/bash
+
+../lib/buildLinux.sh $@
+
+#cp libWavelet.so.0.1.0 '/home/spoilerhead/.AfterShotPro/Plugins/WaveletSharpen2.afplugin/lib'
+#cp sph_wavelet_sharpen.ui '/home/spoilerhead/.AfterShotPro/Plugins/WaveletSharpen2.afplugin/ui'

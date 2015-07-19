@@ -10,13 +10,6 @@ INCLUDEPATH += ../../Plugin_SDK_2014/Plugin
 include(../lib/includes.pri)
 include(../lib/fastmathinclude.pri)
 
-
-# 
-# linux-g++-32 {
-#     message(Linux 32-bit)
-#     DESTDIR=../Builds/Linux32
-# }
-
 # Input
 HEADERS += DenoiseFilter.h DenoisePlugin.h wavelet.h
 FORMS += sph_wavelet_denoise.ui

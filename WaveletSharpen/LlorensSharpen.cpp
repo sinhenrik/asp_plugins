@@ -39,7 +39,7 @@ static inline float hardT(const float value,const float t) {
 
 
 
-#pragma intrinsic(fabs)
+// #pragma intrinsic(fabs)
 #define FABS fabs
 #define SQRT sqrt
 
@@ -81,7 +81,7 @@ static void edgeMask(float *fimg, float *fimgG,const unsigned int width, const u
     const float gradTres = 0.0025f-(passes-2.5f)/10000.f;
     #endif
     
-    for(int i = 0; i<(width*height);i++) {
+    for(unsigned int i = 0; i<(width*height);i++) {
         //qDebug()<<gradX[i]<<"  "<<fsgn(gradX[i]);
         fimgG[i] = hardT(sqrtf(gradX[i]*gradX[i]+gradY[i]*gradY[i]), gradTres);
         //fimgG[i] =sqrtf(gradX[i]*gradX[i]+gradY[i]*gradY[i]);
@@ -767,8 +767,8 @@ void LlorensSharpen(float *fimg, const unsigned int width, const unsigned int he
 // http://creativecommons.org/publicdomain/zero/1.0/
 
 void microcontrast(float *fimg, const unsigned int width, const unsigned int height,float strength){
-	int offset2,c,col,row,n;
-	unsigned int i,j;
+    int offset2,n;
+    unsigned int i,j,col,row;
 	unsigned int  offset;
 	float *L,v,s,contrast;
 	int signs[9];
@@ -776,7 +776,7 @@ void microcontrast(float *fimg, const unsigned int width, const unsigned int hei
         L = new float[width*height];
 	
 
-	c=0;
+    // c=0;
 
 	for(offset=0;offset<width*height;offset++)
 		L[offset]=fimg[offset];

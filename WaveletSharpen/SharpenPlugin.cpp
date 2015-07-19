@@ -33,7 +33,7 @@ bool SharpenPlugin::init(PluginHub *hub, int id, int groupId, const QString &bun
 
 bool SharpenPlugin::registerFilters()
 {
-    LLorensFilter *llorens = new LLorensFilter(m_hub, m_groupId);
+    sphLLorensFilter *llorens = new sphLLorensFilter(m_hub, m_groupId);
 	//if (m_hub->addFilter(llorens, PluginHub::After, QString("RgbToLab"))) {
 		if (m_hub->addFilter(llorens, PluginHub::Before, QString("Sharpen"))) {
         qDebug() << "Successfully registered "<<llorens->name()<<" filter";
@@ -43,7 +43,7 @@ bool SharpenPlugin::registerFilters()
 	}
 
 
-	USMFilter *usm = new USMFilter(m_hub, m_groupId);
+    sphUSMFilter *usm = new sphUSMFilter(m_hub, m_groupId);
 	if (m_hub->addFilter(usm, PluginHub::Before, QString("Sharpen"))) {
         qDebug() << "Successfully registered "<<usm->name()<<" filter";
 	} else {
@@ -52,7 +52,7 @@ bool SharpenPlugin::registerFilters()
 	}
 	
 	
-	WaveletSharpenFilter *sharpener = new WaveletSharpenFilter(m_hub, m_groupId);
+    sphWaveletSharpenFilter *sharpener = new sphWaveletSharpenFilter(m_hub, m_groupId);
 	if (m_hub->addFilter(sharpener, PluginHub::After, usm->name())) {
         qDebug() << "Successfully registered "<<sharpener->name()<<" filter";
 	} else {
@@ -67,38 +67,38 @@ bool SharpenPlugin::registerFilters()
 bool SharpenPlugin::registerOptions()
 {
 
-	m_hub->addBoolOption  (USMFilter::EnableUSM, "bSphWaveletUsmon"            , "Usm Enabled"  , tr("Enables Usm"), "WaveletSharpen2_USM_Filter", false, false, 0);
-	m_hub->addIntOption   (USMFilter::RadiusUSM, "bSphWaveletUsmRadius"        , "Usm Radius"   , tr("Increases the Radius of the Blur filter"), "WaveletSharpen2_USM_Filter", 50, 0, 0);
-    m_hub->addIntOption   (USMFilter::AmountUSM, "bSphWaveletUsmAmount"        , "Usm Amount"   , tr("Amount"), "WaveletSharpen2_USM_Filter", 100, 0, 0);
-	m_hub->addIntOption   (USMFilter::ThresholdUSM, "bSphWaveletUsmThreshold"  , "Usm Threshold", tr("Define Minimum Edge for sharpening"), "WaveletSharpen2_USM_Filter", 0, 0, 0);
-    m_hub->addBoolOption  (USMFilter::USMasClarity, "bSphWaveletUsmClarity"    , "Clarity Mode" , tr("Makes usm work as clarity control"), "WaveletSharpen2_USM_Filter", false, false, 0);
+    m_hub->addBoolOption  (sphUSMFilter::EnableUSM, "bSphWaveletUsmon"            , "Usm Enabled"  , tr("Enables Usm"), "WaveletSharpen2_USM_Filter", false, false, 0);
+    m_hub->addIntOption   (sphUSMFilter::RadiusUSM, "bSphWaveletUsmRadius"        , "Usm Radius"   , tr("Increases the Radius of the Blur filter"), "WaveletSharpen2_USM_Filter", 50, 0, 0);
+    m_hub->addIntOption   (sphUSMFilter::AmountUSM, "bSphWaveletUsmAmount"        , "Usm Amount"   , tr("Amount"), "WaveletSharpen2_USM_Filter", 100, 0, 0);
+    m_hub->addIntOption   (sphUSMFilter::ThresholdUSM, "bSphWaveletUsmThreshold"  , "Usm Threshold", tr("Define Minimum Edge for sharpening"), "WaveletSharpen2_USM_Filter", 0, 0, 0);
+    m_hub->addBoolOption  (sphUSMFilter::USMasClarity, "bSphWaveletUsmClarity"    , "Clarity Mode" , tr("Makes usm work as clarity control"), "WaveletSharpen2_USM_Filter", false, false, 0);
     
     
-	m_hub->addBoolOption  (LLorensFilter::EnableLL, "bSphWaveletLLenable"            , "Gradient Enabled"  , tr("Enables Gradient Sharpening"), "WaveletSharpen2_LLorens_Filter", false, false, 0);
-    m_hub->addIntOption   (LLorensFilter::LLStrength, "bSphWaveletLLStrength"        , "Gradient Strength" , tr("Gradient Sharpening Strength"), "WaveletSharpen2_LLorens_Filter", 30, 0, 0);
-    m_hub->addIntOption   (LLorensFilter::LLIter, "bSphWaveletLLiter"                , "Gradient Width"    , tr("Width of the Gradient (slow)"), "WaveletSharpen2_LLorens_Filter", 3, 1, 0);
-    m_hub->addIntOption   (LLorensFilter::MCStrength, "bSphWaveletMCStrength"        , "Microcontrast"      , tr("Amount of Microcontrast to be added"), "WaveletSharpen2_LLorens_Filter", 0, 0, 0);
+    m_hub->addBoolOption  (sphLLorensFilter::EnableLL, "bSphWaveletLLenable"            , "Gradient Enabled"  , tr("Enables Gradient Sharpening"), "WaveletSharpen2_LLorens_Filter", false, false, 0);
+    m_hub->addIntOption   (sphLLorensFilter::LLStrength, "bSphWaveletLLStrength"        , "Gradient Strength" , tr("Gradient Sharpening Strength"), "WaveletSharpen2_LLorens_Filter", 30, 0, 0);
+    m_hub->addIntOption   (sphLLorensFilter::LLIter, "bSphWaveletLLiter"                , "Gradient Width"    , tr("Width of the Gradient (slow)"), "WaveletSharpen2_LLorens_Filter", 3, 1, 0);
+    m_hub->addIntOption   (sphLLorensFilter::MCStrength, "bSphWaveletMCStrength"        , "Microcontrast"      , tr("Amount of Microcontrast to be added"), "WaveletSharpen2_LLorens_Filter", 0, 0, 0);
     
     
 
-	m_hub->addBoolOption  (WaveletSharpenFilter::Enable,   "bSphWaveleton"              , "Sharpen 1 Enable",  tr("Enable Filter"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
-	m_hub->addIntOption   (WaveletSharpenFilter::Amount,   "bSphWaveletAmount"          , "Sharpen 1 Amount",  tr("Sharpening Strength"), "WaveletSharpen2_Wavelet_Filter", 50, 0, 0);
-	m_hub->addDoubleOption(WaveletSharpenFilter::Radius,   "bSphWaveletRadius"          , "Sharpen 1 Radius",  tr("Sharpening Radius"), "WaveletSharpen2_Wavelet_Filter", 0.5, 0, 0);
-//	m_hub->addIntOption   (WaveletSharpenFilter::Blend,    "bSphWaveletBlend"           , "Sharpen 1 Blend",   "Blend", "WaveletSharpen2_Wavelet_Filter", 100, 0, 0);
-	m_hub->addBoolOption  (WaveletSharpenFilter::DePepper, "bSphWaveletSharpenDePepper" , "Sharpen 1 DePepper",tr("Salt and Pepper noise removal (slow)"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
-	m_hub->addIntOption  (WaveletSharpenFilter::Edges,    "bSphWaveletEdge"     , "Sharpen 1 Edge",    tr("Limit Sharpening to Edges"), "WaveletSharpen2_Wavelet_Filter", 100, 0, 0);	
-	m_hub->addBoolOption  (WaveletSharpenFilter::Clarity,   "bSphWaveletSharpenClarity" , "Sharpen 1 Clarity",  tr("Apply with clarity mask"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);	
+    m_hub->addBoolOption  (sphWaveletSharpenFilter::Enable,   "bSphWaveleton"              , "Sharpen 1 Enable",  tr("Enable Filter"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
+    m_hub->addIntOption   (sphWaveletSharpenFilter::Amount,   "bSphWaveletAmount"          , "Sharpen 1 Amount",  tr("Sharpening Strength"), "WaveletSharpen2_Wavelet_Filter", 50, 0, 0);
+    m_hub->addDoubleOption(sphWaveletSharpenFilter::Radius,   "bSphWaveletRadius"          , "Sharpen 1 Radius",  tr("Sharpening Radius"), "WaveletSharpen2_Wavelet_Filter", 0.5, 0, 0);
+//	m_hub->addIntOption   (sphWaveletSharpenFilter::Blend,    "bSphWaveletBlend"           , "Sharpen 1 Blend",   "Blend", "WaveletSharpen2_Wavelet_Filter", 100, 0, 0);
+    m_hub->addBoolOption  (sphWaveletSharpenFilter::DePepper, "bSphWaveletSharpenDePepper" , "Sharpen 1 DePepper",tr("Salt and Pepper noise removal (slow)"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
+    m_hub->addIntOption  (sphWaveletSharpenFilter::Edges,    "bSphWaveletEdge"     , "Sharpen 1 Edge",    tr("Limit Sharpening to Edges"), "WaveletSharpen2_Wavelet_Filter", 100, 0, 0);
+    m_hub->addBoolOption  (sphWaveletSharpenFilter::Clarity,   "bSphWaveletSharpenClarity" , "Sharpen 1 Clarity",  tr("Apply with clarity mask"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
 	
 	
 	
 	
-	m_hub->addBoolOption  (WaveletSharpenFilter::Enable2,   "bSphWaveleton2"              , "Sharpen 2 Enable",  tr("Enable Filter"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
-	m_hub->addIntOption   (WaveletSharpenFilter::Amount2,   "bSphWaveletAmount2"          , "Sharpen 2 Amount",  tr("Sharpening Strength"), "WaveletSharpen2_Wavelet_Filter", 50, 0, 0);
-	m_hub->addDoubleOption(WaveletSharpenFilter::Radius2,   "bSphWaveletRadius2"          , "Sharpen 2 Radius",  tr("Sharpening Radius"), "WaveletSharpen2_Wavelet_Filter", 2.0, 0, 0);
-//	m_hub->addIntOption   (WaveletSharpenFilter::Blend2,    "bSphWaveletBlend2"           , "Sharpen 2 Blend",   "Blend", "WaveletSharpen2_Wavelet_Filter", 100, 0, 0);
-	m_hub->addBoolOption  (WaveletSharpenFilter::DePepper2, "bSphWaveletSharpenDePepper2" , "Sharpen 2 DePepper", tr("Salt and Pepper noise removal (slow)"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
-	m_hub->addIntOption  (WaveletSharpenFilter::Edges2,    "bSphWaveletEdge2"     , "Sharpen 2 Edge",    tr("Limit Sharpening to Edges"), "WaveletSharpen2_Wavelet_Filter", 100, 0, 0);		
-	m_hub->addBoolOption  (WaveletSharpenFilter::Clarity2,   "bSphWaveletSharpenClarity2" , "Sharpen 2 Clarity",  tr("Apply with clarity mask"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);	
+    m_hub->addBoolOption  (sphWaveletSharpenFilter::Enable2,   "bSphWaveleton2"              , "Sharpen 2 Enable",  tr("Enable Filter"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
+    m_hub->addIntOption   (sphWaveletSharpenFilter::Amount2,   "bSphWaveletAmount2"          , "Sharpen 2 Amount",  tr("Sharpening Strength"), "WaveletSharpen2_Wavelet_Filter", 50, 0, 0);
+    m_hub->addDoubleOption(sphWaveletSharpenFilter::Radius2,   "bSphWaveletRadius2"          , "Sharpen 2 Radius",  tr("Sharpening Radius"), "WaveletSharpen2_Wavelet_Filter", 2.0, 0, 0);
+//	m_hub->addIntOption   (sphWaveletSharpenFilter::Blend2,    "bSphWaveletBlend2"           , "Sharpen 2 Blend",   "Blend", "WaveletSharpen2_Wavelet_Filter", 100, 0, 0);
+    m_hub->addBoolOption  (sphWaveletSharpenFilter::DePepper2, "bSphWaveletSharpenDePepper2" , "Sharpen 2 DePepper", tr("Salt and Pepper noise removal (slow)"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
+    m_hub->addIntOption  (sphWaveletSharpenFilter::Edges2,    "bSphWaveletEdge2"     , "Sharpen 2 Edge",    tr("Limit Sharpening to Edges"), "WaveletSharpen2_Wavelet_Filter", 100, 0, 0);
+    m_hub->addBoolOption  (sphWaveletSharpenFilter::Clarity2,   "bSphWaveletSharpenClarity2" , "Sharpen 2 Clarity",  tr("Apply with clarity mask"), "WaveletSharpen2_Wavelet_Filter", false, false, 0);
     
     /*m_hub->addIntOption   (SharpenFilter::EAWAlpha, "bSphWaveletEAWAlpha"        , "EAWAlpha", "Alpha", "WaveletSharpen2_Wavelet_Filter", 0, 0, 0);
     m_hub->addIntOption   (SharpenFilter::EAWMaxband, "bSphWaveletEAWMaxband"    , "EAWMaxband", "Maxband", "WaveletSharpen2_Wavelet_Filter", 10, 0, 0);
@@ -177,43 +177,43 @@ void SharpenPlugin::handleControlChange(const QString &optionName, int groupId, 
     //qDebug()<<"handlecontrolchange";
     // USM settings changes   
 	if(
-	    changes.contains(USMFilter::RadiusUSM, m_groupId)
-	    || changes.contains(USMFilter::AmountUSM, m_groupId)
-	    || changes.contains(USMFilter::ThresholdUSM, m_groupId)
-	    || changes.contains(USMFilter::USMasClarity, m_groupId)
+        changes.contains(sphUSMFilter::RadiusUSM, m_groupId)
+        || changes.contains(sphUSMFilter::AmountUSM, m_groupId)
+        || changes.contains(sphUSMFilter::ThresholdUSM, m_groupId)
+        || changes.contains(sphUSMFilter::USMasClarity, m_groupId)
 	){
-        changes.setBool(USMFilter::EnableUSM, m_groupId, true);
+        changes.setBool(sphUSMFilter::EnableUSM, m_groupId, true);
 	}
 	
 	// Sharpen1 settings changes   
 	if(
-	    changes.contains(WaveletSharpenFilter::Amount, m_groupId)
-	    || changes.contains(WaveletSharpenFilter::Radius, m_groupId)
-	    || changes.contains(WaveletSharpenFilter::Clarity, m_groupId)
-	    || changes.contains(WaveletSharpenFilter::DePepper, m_groupId)
-	    || changes.contains(WaveletSharpenFilter::Edges, m_groupId)
+        changes.contains(sphWaveletSharpenFilter::Amount, m_groupId)
+        || changes.contains(sphWaveletSharpenFilter::Radius, m_groupId)
+        || changes.contains(sphWaveletSharpenFilter::Clarity, m_groupId)
+        || changes.contains(sphWaveletSharpenFilter::DePepper, m_groupId)
+        || changes.contains(sphWaveletSharpenFilter::Edges, m_groupId)
 	){
-        changes.setBool(WaveletSharpenFilter::Enable, m_groupId, true);
+        changes.setBool(sphWaveletSharpenFilter::Enable, m_groupId, true);
 	}
 	
 	// Sharpen2 settings changes   
 	if(
-	    changes.contains(WaveletSharpenFilter::Amount2, m_groupId)
-	    || changes.contains(WaveletSharpenFilter::Radius2, m_groupId)
-	    || changes.contains(WaveletSharpenFilter::Clarity2, m_groupId)
-	    || changes.contains(WaveletSharpenFilter::DePepper2, m_groupId)
-	    || changes.contains(WaveletSharpenFilter::Edges2, m_groupId)
+        changes.contains(sphWaveletSharpenFilter::Amount2, m_groupId)
+        || changes.contains(sphWaveletSharpenFilter::Radius2, m_groupId)
+        || changes.contains(sphWaveletSharpenFilter::Clarity2, m_groupId)
+        || changes.contains(sphWaveletSharpenFilter::DePepper2, m_groupId)
+        || changes.contains(sphWaveletSharpenFilter::Edges2, m_groupId)
 	){
-        changes.setBool(WaveletSharpenFilter::Enable2, m_groupId, true);
+        changes.setBool(sphWaveletSharpenFilter::Enable2, m_groupId, true);
 	}
 	
 	// LLorens (Gradient) settings changes   
 	if(
-	    changes.contains(LLorensFilter::LLStrength, m_groupId)
-	    || changes.contains(LLorensFilter::LLIter, m_groupId)
-	    || changes.contains(LLorensFilter::MCStrength, m_groupId)
+        changes.contains(sphLLorensFilter::LLStrength, m_groupId)
+        || changes.contains(sphLLorensFilter::LLIter, m_groupId)
+        || changes.contains(sphLLorensFilter::MCStrength, m_groupId)
 	){
-        changes.setBool(LLorensFilter::EnableLL, m_groupId, true);
+        changes.setBool(sphLLorensFilter::EnableLL, m_groupId, true);
 	}
 }
 

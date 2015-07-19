@@ -8,10 +8,10 @@
 
 #include "sphLayerFilter.h"
 
-class USMFilter : public sphLayerFilter
+class sphUSMFilter : public sphLayerFilter
 {
 public:
-	USMFilter(PluginHub *hub, int groupId) :sphLayerFilter(hub,groupId,RGB2LAB,GAMMA_NONE){ } ;
+    sphUSMFilter(PluginHub *hub, int groupId) :sphLayerFilter(hub,groupId,RGB2LAB,GAMMA_NONE){ } ;
 	//virtual ~SharpenFilter() { ; }
 
 	enum OptionNames { 

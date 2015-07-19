@@ -24,7 +24,7 @@
 
 using namespace std;
 
-#define FilterName USMFilter
+#define FilterName sphUSMFilter
 
 #define kernelsize 50.f //seems to work well, don't change unless nencessary, maybe need rebalance in additionalradius
 //#define SUBSAMPLE
