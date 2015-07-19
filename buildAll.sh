@@ -1,16 +1,16 @@
 #! /bin/bash
 cd FatToni
-./build
+./build $@
 cd ..
 cd Grain
-./build
+./build  $@
 cd ..
 cd SiliconBonk
-./build
+./build $@
 cd ..
 cd WaveletDenoise
-./build
+./build $@
 cd ..
 cd WaveletSharpen
-./build
+./build $@
 cd ..

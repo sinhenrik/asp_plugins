@@ -1,16 +1,16 @@
 #! /bin/bash
 cd FatToni
-./build64
+./build64  $@
 cd ..
 cd Grain
-./build64
+./build64  $@
 cd ..
 cd SiliconBonk
-./build64
+./build64  $@
 cd ..
 cd WaveletDenoise
-./build64
+./build64 $@
 cd ..
 cd WaveletSharpen
-./build64
+./build64 $@
 cd ..

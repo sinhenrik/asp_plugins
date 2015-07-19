@@ -227,10 +227,11 @@ void FilterName::ProcessBuffer(pixel *fimg[3],int width,int height,float zoomLev
         	
         	
         	//Generate Grain field
-        	for(int i = 0; i<(width*height); i++) {
+            for(int i = 0; i<(width*height); i++) {
               int ix = ((i%width)-padX)+tileX;  // absolute X coordinate of the pixel
               int iy = ((i/width)-padY)+tileY;  // absolute Y coordinate
-              unsigned int id = ix+(iy<<16);    //pixel id
+              // unsigned int id = ix+(iy<<16);    //pixel id
+              
 
               float grain = 0.0f;               //initialize
              
@@ -249,7 +250,7 @@ void FilterName::ProcessBuffer(pixel *fimg[3],int width,int height,float zoomLev
               grainField[i] = grain;
             }
             
-        	//Blur the Grain
+            //Blur the Grain
             GAUSS_IIR(grainField,width,height,radius);
 
            

@@ -106,6 +106,7 @@ bool SiliconBonkPlugin::finish()
 
 PluginDependency *SiliconBonkPlugin::createDependency(const QString &dname)
 {
+    Q_UNUSED(dname);
 /*    qDebug()<<PLUGIN_NAME_HR<<" Dependency requested";
 	if (dname == "ToolData") {        //For asPluginupdate
         ToolData *toolData = new ToolData(m_hub);

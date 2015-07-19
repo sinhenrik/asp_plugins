@@ -1,4 +1,6 @@
-../lib/buildLinux.sh
-cp libFatToni.so '/home/spoilerhead/.AfterShotPro/Plugins/FatToni.afplugin/lib'
-cp FatToniPlugin.ui '/home/spoilerhead/.AfterShotPro/Plugins/FatToni.afplugin/ui'
+#!/bin/bash
 
+../lib/buildLinux.sh $@
+
+#cp libDenoisePlugin.so.0.1.0 ~/.AfterShot/Plugins/Wavelet\ Denoise\ 32-bit.afplugin/lib
+#cp sph_wavelet_denoise.ui ~/'.AfterShot/Plugins/Wavelet Denoise 32-bit.afplugin/ui'
