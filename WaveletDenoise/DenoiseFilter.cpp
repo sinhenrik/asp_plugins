@@ -66,6 +66,8 @@ bool FilterName::needsOriginalImage  ()
 
 int FilterName::additionalRadius(PluginOptionList  *layerOptions,float zoomLevel) const
 {
+    Q_UNUSED(zoomLevel);
+    
     bool okay;
     bool  enable = layerOptions->getBool(Enable, m_groupId, okay);
     
@@ -79,6 +81,9 @@ int FilterName::additionalRadius(PluginOptionList  *layerOptions,float zoomLevel
 }
 
 static inline float hardT(const float value,const float t) { 
+    
+    Q_UNUSED(t);
+    
     //    return (value>=t)?0.f:1.f;
     return 1.f-min(value,0.95f);
 }
@@ -104,7 +109,7 @@ static inline void edgeMaskB(float *fimg, float *fimgG,float *buf1,float *buf2,c
     const float gradTres = 0.050f;
     const float boost = 10.f;
         
-    for(int i = 0; i<(width*height);i++) {  //create hard edges
+    for(unsigned int i = 0; i<(width*height);i++) {  //create hard edges
         //qDebug()<<gradX[i]<<"  "<<fsgn(gradX[i]);
         fimgG[i] = hardT(boost*fastsqrt2/*sqrtf*/(gradX[i]*gradX[i]+gradY[i]*gradY[i]), gradTres);
     }

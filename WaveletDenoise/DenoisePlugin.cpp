@@ -80,18 +80,26 @@ QList<QWidget*> DenoisePlugin::toolWidgets()
 
 void DenoisePlugin::toolWidgetCreated(QWidget *uiWidget)
 {
+    Q_UNUSED(uiWidget);
 }
 
 
 //========================================================================================================
 void DenoisePlugin::handleSettingsChange(const PluginImageSettings &options, const PluginImageSettings &changed, int currentLayer)
 {
-
+    Q_UNUSED(options);
+    Q_UNUSED(changed);
+    
     if(options.options(currentLayer) == NULL) return;
 }
 
 void DenoisePlugin::handleControlChange(const QString &optionName, int groupId, int layer, const PluginImageSettings &options, const PluginOptionList &current, PluginOptionList &changes)
 {
+    Q_UNUSED(optionName);
+    Q_UNUSED(options);
+    Q_UNUSED(groupId);
+    Q_UNUSED(current);
+    
     //   v-- You need to add this if you're going to use the options --v
     //   some changes do not have options - check for NULL
     if (options.options(layer) == NULL) return;
@@ -111,4 +119,5 @@ void DenoisePlugin::handleControlChange(const QString &optionName, int groupId, 
 //========================================================================================================
 void DenoisePlugin::handleHotnessChanged(const PluginImageSettings &options)
 {
+    Q_UNUSED(options);
 }

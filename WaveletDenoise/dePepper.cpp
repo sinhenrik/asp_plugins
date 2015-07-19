@@ -1,8 +1,8 @@
 #include "dePepper.h"
 void dePepperF (float *fimg[3], const unsigned int width, const unsigned int height) {
 
-  int col,row,i;
-  int size = width * height;
+  unsigned int col,row,i;
+  unsigned int size = width * height;
 // Remove Salt and Pepper Noise
  
       for(col = 1; col < width-1; col++) {
