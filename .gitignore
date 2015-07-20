@@ -21,6 +21,7 @@ Makefile.Release
 
 #builddir
 *builddir*
+Builds*
 
 #Visual studio crap
 *.ncb
