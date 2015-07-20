@@ -2,7 +2,7 @@
 if "%1" == "" goto noargs
 
 nmake clean
-qmake -spec C:\Qt\5.4\msvc2013\mkspecs\winrt-x86-msvc2013 -config %1
+qmake -spec C:\Qt\5.4\msvc2013_64\mkspecs\winrt-x64-msvc2013 -config %1nmake
 nmake
 
 goto done
@@ -11,4 +11,5 @@ goto done
 echo "No Arguments, Not Nice"
 
 :done
+
 

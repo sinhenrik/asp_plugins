@@ -49,6 +49,7 @@ CONFIG(debug,debug|release) {
 	RCC_DIR	    =	builddir/objects/debug/rcc
 	UI_HEADERS_DIR = builddir/objects/debug/uih
 	UI_SOURCES_DIR = builddir/objects/debug/uisrc
+
     linux-g++-64 {
     !linux-g++-32 {
         message(Linux 64-bit debug build)
@@ -61,6 +62,16 @@ CONFIG(debug,debug|release) {
         message(Linux 32-bit debug build)
         DESTDIR=../Builds/Linux32/debug
     }
+    }
+    
+    winrt-x64-msvc2013 {
+        message(Windows 64-bit debug build)
+        DESTDIR=..\Builds\Windows64\debug
+    }
+    
+    winrt-x86-msvc2013  {
+        message(Windows 32-bit debug build)
+        DESTDIR=..\Builds\Windows32\debug
     }
 }
 
@@ -85,4 +96,15 @@ CONFIG(release,debug|release) {
         DESTDIR=../Builds/Linux32/release
     }
     }
+
+    winrt-x64-msvc2013 {
+        message(Windows 64-bit release build)
+        DESTDIR=..\Builds\Windows64\release
+    }
+    
+    winrt-x86-msvc2013  {
+        message(Windows 32-bit release build)
+        DESTDIR=..\Builds\Windows32\release
+    }
+
 }
