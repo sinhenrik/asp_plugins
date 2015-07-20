@@ -1,23 +1,16 @@
 call "C:\Program Files\Microsoft Visual Studio 9.0\VC\vcvarsall.bat" x86
-cd aLiCE
-call buildwin
-msbuild /t:Rebuild /p:Configuration=Release
+rem cd aLiCE
+rem call buildwin %1
 cd ..\FatToni
-call buildwin
-msbuild /t:Rebuild /p:Configuration=Release
-cd ..\Gelatin
-call buildwin
-msbuild /t:Rebuild /p:Configuration=Release
+call buildwin %1
+rem cd ..\Gelatin
+rem call buildwin %1
 cd ..\Grain
-call buildwin
-msbuild /t:Rebuild /p:Configuration=Release
+call buildwin %1
 cd ..\SiliconBonk
-call buildwin
-msbuild /t:Rebuild /p:Configuration=Release
+call buildwin %1
 cd ..\WaveletDenoise
-call buildwin
-msbuild /t:Rebuild /p:Configuration=Release
+call buildwin %1
 cd ..\WaveletSharpen
 call buildwin
-msbuild /t:Rebuild /p:Configuration=Release
 pause
