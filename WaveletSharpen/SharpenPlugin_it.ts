@@ -4,84 +4,84 @@
 <context>
     <name>SharpenPlugin</name>
     <message>
-        <location filename="SharpenPlugin.cpp" line="68"/>
+        <location filename="SharpenPlugin.cpp" line="70"/>
         <source>Enables Usm</source>
         <translation>Abilita Usm</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="69"/>
+        <location filename="SharpenPlugin.cpp" line="71"/>
         <source>Increases the Radius of the Blur filter</source>
         <translation>Aumenta il raggio del filtro di sfocatura</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="70"/>
+        <location filename="SharpenPlugin.cpp" line="72"/>
         <source>Amount</source>
         <translation>Valore</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="71"/>
+        <location filename="SharpenPlugin.cpp" line="73"/>
         <source>Define Minimum Edge for sharpening</source>
         <translation>Definisci bordo minimo per messa a fuoco</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="72"/>
+        <location filename="SharpenPlugin.cpp" line="74"/>
         <source>Makes usm work as clarity control</source>
         <translation>Imposta USM per l&apos;utilizzo come controllo di chiarezza</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="75"/>
+        <location filename="SharpenPlugin.cpp" line="77"/>
         <source>Enables Gradient Sharpening</source>
         <translation>Abilita messa a fuoco gradiente</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="76"/>
+        <location filename="SharpenPlugin.cpp" line="78"/>
         <source>Gradient Sharpening Strength</source>
         <translation>Intensità messa a fuoco gradiente</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="77"/>
+        <location filename="SharpenPlugin.cpp" line="79"/>
         <source>Width of the Gradient (slow)</source>
         <oldsource>With of the Gradient (slow)</oldsource>
         <translation type="unfinished">Larghezza del gradiente (lento)</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="78"/>
+        <location filename="SharpenPlugin.cpp" line="80"/>
         <source>Amount of Microcontrast to be added</source>
         <translation>Importo di microcontrasto da aggiungere</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="82"/>
-        <location filename="SharpenPlugin.cpp" line="93"/>
+        <location filename="SharpenPlugin.cpp" line="84"/>
+        <location filename="SharpenPlugin.cpp" line="95"/>
         <source>Enable Filter</source>
         <translation>Abilita filtro</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="83"/>
-        <location filename="SharpenPlugin.cpp" line="94"/>
+        <location filename="SharpenPlugin.cpp" line="85"/>
+        <location filename="SharpenPlugin.cpp" line="96"/>
         <source>Sharpening Strength</source>
         <translation>Intensità messa a fuoco</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="84"/>
-        <location filename="SharpenPlugin.cpp" line="95"/>
+        <location filename="SharpenPlugin.cpp" line="86"/>
+        <location filename="SharpenPlugin.cpp" line="97"/>
         <source>Sharpening Radius</source>
         <translation>Raggio di messa a fuoco</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="86"/>
-        <location filename="SharpenPlugin.cpp" line="97"/>
+        <location filename="SharpenPlugin.cpp" line="88"/>
+        <location filename="SharpenPlugin.cpp" line="99"/>
         <source>Salt and Pepper noise removal (slow)</source>
         <translation>Rimozione disturbo sale e pepe (lento)</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="87"/>
-        <location filename="SharpenPlugin.cpp" line="98"/>
+        <location filename="SharpenPlugin.cpp" line="89"/>
+        <location filename="SharpenPlugin.cpp" line="100"/>
         <source>Limit Sharpening to Edges</source>
         <translation>Limita messa a fuoco ai bordi</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="88"/>
-        <location filename="SharpenPlugin.cpp" line="99"/>
+        <location filename="SharpenPlugin.cpp" line="90"/>
+        <location filename="SharpenPlugin.cpp" line="101"/>
         <source>Apply with clarity mask</source>
         <translation>Applica con maschera di chiarezza</translation>
     </message>

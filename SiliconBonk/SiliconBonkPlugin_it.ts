@@ -178,69 +178,69 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>SiliconBonkPlugin</name>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="75"/>
+        <location filename="SiliconBonkPlugin.cpp" line="76"/>
         <source>Enable Plugin</source>
         <translation>Abilita plugin</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="76"/>
+        <location filename="SiliconBonkPlugin.cpp" line="77"/>
         <source>Reduce highlight luminance
 This increases Highlight details when using high contrast</source>
         <translation>Riduci luminanza alte luci
 Aumenta i dettagli delle alte luci quando si utilizza un contrasto elevato</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="78"/>
+        <location filename="SiliconBonkPlugin.cpp" line="79"/>
         <source>Selected Hue</source>
         <translation>Tonalità selezionata</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="79"/>
+        <location filename="SiliconBonkPlugin.cpp" line="80"/>
         <source>Luminance Boost</source>
         <translation>Aumenta luminanza</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="80"/>
+        <location filename="SiliconBonkPlugin.cpp" line="81"/>
         <source>Contrast</source>
         <translation>Contrasto</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="81"/>
+        <location filename="SiliconBonkPlugin.cpp" line="82"/>
         <source>Midpoint</source>
         <translation>Punto centrale</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="82"/>
+        <location filename="SiliconBonkPlugin.cpp" line="83"/>
         <source>Saturation (keep color)</source>
         <translation>Saturazione (mantieni colore)</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="85"/>
+        <location filename="SiliconBonkPlugin.cpp" line="86"/>
         <source>Luminance EQ red</source>
         <translation>Rosso EQ luminanza</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="86"/>
+        <location filename="SiliconBonkPlugin.cpp" line="87"/>
         <source>Luminance EQ yellow</source>
         <translation>Giallo EQ luminanza</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="87"/>
+        <location filename="SiliconBonkPlugin.cpp" line="88"/>
         <source>Luminance EQ green</source>
         <translation>Verde EQ luminanza</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="88"/>
+        <location filename="SiliconBonkPlugin.cpp" line="89"/>
         <source>Luminance EQ cyan</source>
         <translation>Ciano EQ luminanza</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="89"/>
+        <location filename="SiliconBonkPlugin.cpp" line="90"/>
         <source>Luminance EQ blue</source>
         <translation>Blu EQ luminanza</translation>
     </message>
     <message>
-        <location filename="SiliconBonkPlugin.cpp" line="90"/>
+        <location filename="SiliconBonkPlugin.cpp" line="91"/>
         <source>Luminance EQ magenta</source>
         <translation>Magenta EQ luminanza</translation>
     </message>

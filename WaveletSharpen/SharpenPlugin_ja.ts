@@ -4,84 +4,84 @@
 <context>
     <name>SharpenPlugin</name>
     <message>
-        <location filename="SharpenPlugin.cpp" line="68"/>
+        <location filename="SharpenPlugin.cpp" line="70"/>
         <source>Enables Usm</source>
         <translation>Usm を有効にする</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="69"/>
+        <location filename="SharpenPlugin.cpp" line="71"/>
         <source>Increases the Radius of the Blur filter</source>
         <translation>青フィルターの半径を増やす</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="70"/>
+        <location filename="SharpenPlugin.cpp" line="72"/>
         <source>Amount</source>
         <translation>量</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="71"/>
+        <location filename="SharpenPlugin.cpp" line="73"/>
         <source>Define Minimum Edge for sharpening</source>
         <translation>シャープニングの最小エッジを定義する</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="72"/>
+        <location filename="SharpenPlugin.cpp" line="74"/>
         <source>Makes usm work as clarity control</source>
         <translation>鮮明コントロールとして usm を使用する</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="75"/>
+        <location filename="SharpenPlugin.cpp" line="77"/>
         <source>Enables Gradient Sharpening</source>
         <translation>グラデーション シャープニングを有効にする</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="76"/>
+        <location filename="SharpenPlugin.cpp" line="78"/>
         <source>Gradient Sharpening Strength</source>
         <translation>グラデーション シャープニングの強度</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="77"/>
+        <location filename="SharpenPlugin.cpp" line="79"/>
         <source>Width of the Gradient (slow)</source>
         <oldsource>With of the Gradient (slow)</oldsource>
         <translation type="unfinished">グレデーション (スロー)</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="78"/>
+        <location filename="SharpenPlugin.cpp" line="80"/>
         <source>Amount of Microcontrast to be added</source>
         <translation>追加するマイクロコントラストの量</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="82"/>
-        <location filename="SharpenPlugin.cpp" line="93"/>
+        <location filename="SharpenPlugin.cpp" line="84"/>
+        <location filename="SharpenPlugin.cpp" line="95"/>
         <source>Enable Filter</source>
         <translation>フィルターを有効にする</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="83"/>
-        <location filename="SharpenPlugin.cpp" line="94"/>
+        <location filename="SharpenPlugin.cpp" line="85"/>
+        <location filename="SharpenPlugin.cpp" line="96"/>
         <source>Sharpening Strength</source>
         <translation>シャープニングの強度</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="84"/>
-        <location filename="SharpenPlugin.cpp" line="95"/>
+        <location filename="SharpenPlugin.cpp" line="86"/>
+        <location filename="SharpenPlugin.cpp" line="97"/>
         <source>Sharpening Radius</source>
         <translation>シャープニングの半径</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="86"/>
-        <location filename="SharpenPlugin.cpp" line="97"/>
+        <location filename="SharpenPlugin.cpp" line="88"/>
+        <location filename="SharpenPlugin.cpp" line="99"/>
         <source>Salt and Pepper noise removal (slow)</source>
         <translation>ごま塩ノイズを除去 (スロー)</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="87"/>
-        <location filename="SharpenPlugin.cpp" line="98"/>
+        <location filename="SharpenPlugin.cpp" line="89"/>
+        <location filename="SharpenPlugin.cpp" line="100"/>
         <source>Limit Sharpening to Edges</source>
         <translation>シャープニングをエッジに制限する</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="88"/>
-        <location filename="SharpenPlugin.cpp" line="99"/>
+        <location filename="SharpenPlugin.cpp" line="90"/>
+        <location filename="SharpenPlugin.cpp" line="101"/>
         <source>Apply with clarity mask</source>
         <translation>鮮明マスクの適用</translation>
     </message>

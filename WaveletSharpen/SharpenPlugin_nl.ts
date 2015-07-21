@@ -4,84 +4,84 @@
 <context>
     <name>SharpenPlugin</name>
     <message>
-        <location filename="SharpenPlugin.cpp" line="68"/>
+        <location filename="SharpenPlugin.cpp" line="70"/>
         <source>Enables Usm</source>
         <translation>USM inschakelen</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="69"/>
+        <location filename="SharpenPlugin.cpp" line="71"/>
         <source>Increases the Radius of the Blur filter</source>
         <translation>Straal van het vervagingsfilter vergroten</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="70"/>
+        <location filename="SharpenPlugin.cpp" line="72"/>
         <source>Amount</source>
         <translation>Hoeveelheid</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="71"/>
+        <location filename="SharpenPlugin.cpp" line="73"/>
         <source>Define Minimum Edge for sharpening</source>
         <translation>Minimumrand voor verscherping definiëren</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="72"/>
+        <location filename="SharpenPlugin.cpp" line="74"/>
         <source>Makes usm work as clarity control</source>
         <translation>Zo werkt USM als helderheidsinstelling</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="75"/>
+        <location filename="SharpenPlugin.cpp" line="77"/>
         <source>Enables Gradient Sharpening</source>
         <translation>Gradiëntverscherping inschakelen</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="76"/>
+        <location filename="SharpenPlugin.cpp" line="78"/>
         <source>Gradient Sharpening Strength</source>
         <translation>Sterkte gradiëntverscherping</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="77"/>
+        <location filename="SharpenPlugin.cpp" line="79"/>
         <source>Width of the Gradient (slow)</source>
         <oldsource>With of the Gradient (slow)</oldsource>
         <translation type="unfinished">Breedte van de gradiënt (langzaam)</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="78"/>
+        <location filename="SharpenPlugin.cpp" line="80"/>
         <source>Amount of Microcontrast to be added</source>
         <translation>Hoeveelheid microcontrast dat moet worden toegevoegd</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="82"/>
-        <location filename="SharpenPlugin.cpp" line="93"/>
+        <location filename="SharpenPlugin.cpp" line="84"/>
+        <location filename="SharpenPlugin.cpp" line="95"/>
         <source>Enable Filter</source>
         <translation>Filter inschakelen</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="83"/>
-        <location filename="SharpenPlugin.cpp" line="94"/>
+        <location filename="SharpenPlugin.cpp" line="85"/>
+        <location filename="SharpenPlugin.cpp" line="96"/>
         <source>Sharpening Strength</source>
         <translation>Sterkte verscherping</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="84"/>
-        <location filename="SharpenPlugin.cpp" line="95"/>
+        <location filename="SharpenPlugin.cpp" line="86"/>
+        <location filename="SharpenPlugin.cpp" line="97"/>
         <source>Sharpening Radius</source>
         <translation>Straal verscherping</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="86"/>
-        <location filename="SharpenPlugin.cpp" line="97"/>
+        <location filename="SharpenPlugin.cpp" line="88"/>
+        <location filename="SharpenPlugin.cpp" line="99"/>
         <source>Salt and Pepper noise removal (slow)</source>
         <translation>Verwijdering zout-en-peperruis (langzaam)</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="87"/>
-        <location filename="SharpenPlugin.cpp" line="98"/>
+        <location filename="SharpenPlugin.cpp" line="89"/>
+        <location filename="SharpenPlugin.cpp" line="100"/>
         <source>Limit Sharpening to Edges</source>
         <translation>Verscherping beperken tot de randen</translation>
     </message>
     <message>
-        <location filename="SharpenPlugin.cpp" line="88"/>
-        <location filename="SharpenPlugin.cpp" line="99"/>
+        <location filename="SharpenPlugin.cpp" line="90"/>
+        <location filename="SharpenPlugin.cpp" line="101"/>
         <source>Apply with clarity mask</source>
         <translation>Toepassen met helderheidsmasker</translation>
     </message>
