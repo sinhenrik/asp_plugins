@@ -16,8 +16,8 @@ INCLUDEPATH += ../../Plugin_SDK_2014/Plugin ../lib ../lib/PluginTools
 
 # include mac build defines only on mac. These are from the SDK in the /common directory and are required for mac compiles - Please include these in your project for mac builds.
 mac {
-    include( mac.pri )
-    include( Release.xcconfig )
+#    include( ../../Plugin_SDK_2014/examples/common/mac.pri )
+#    include( ../../Plugin_SDK_2014/examples/common/Release.xcconfig )
     #TODO: add optimzed MAC compiler flags!
 }
 
@@ -73,6 +73,11 @@ CONFIG(debug,debug|release) {
         message(Windows 32-bit debug build)
         DESTDIR=..\Builds\Windows32\debug
     }
+
+    macx-g++ {
+	message(MacOSX 64-bit debug build)
+	DESTDIR=../Builds/MacOSX/debug
+    }
 }
 
 CONFIG(release,debug|release) {
@@ -107,4 +112,8 @@ CONFIG(release,debug|release) {
         DESTDIR=..\Builds\Windows32\release
     }
 
+    macx-g++ {
+        message(MacOSX 64-bit release build)
+        DESTDIR=../Builds/MacOSX/release
+    }
 }

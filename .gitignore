@@ -19,6 +19,10 @@ Makefile
 Makefile.Debug
 Makefile.Release
 
+# Mac specific 
+.DS_Store
+.qmake.stash
+
 #builddir
 *builddir*
 Builds*
