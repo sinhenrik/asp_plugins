@@ -210,7 +210,7 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_hue.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_hue.png)0 18 0 18;
 }</string>
          </property>
          <property name="maximum">
@@ -228,7 +228,7 @@
         <widget class="QSlider" name="FatToniSH_slider">
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_sat.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_sat.png)0 18 0 18;
 }</string>
          </property>
          <property name="minimum">
@@ -327,7 +327,7 @@
         <widget class="QSlider" name="FatToniHS_slider">
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_hue.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_hue.png)0 18 0 18;
 }</string>
          </property>
          <property name="minimum">
@@ -373,7 +373,7 @@
         <widget class="QSlider" name="FatToniCont_slider">
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_gray.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_gray.png)0 18 0 18;
 }</string>
          </property>
          <property name="maximum">
@@ -480,7 +480,7 @@
         <widget class="QSlider" name="FatToniMid_slider">
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_gray.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_gray.png)0 18 0 18;
 }</string>
          </property>
          <property name="minimum">
@@ -580,7 +580,7 @@
         <widget class="QSlider" name="FatToniSS_slider">
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_sat.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_sat.png)0 18 0 18;
 }</string>
          </property>
          <property name="minimum">
@@ -648,7 +648,7 @@
         <widget class="QSlider" name="FatToniMix_slider">
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_gray.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_gray.png)0 18 0 18;
 }</string>
          </property>
          <property name="maximum">
@@ -757,7 +757,7 @@
         <widget class="QSlider" name="FatToniBaseH_slider">
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_hue.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_hue.png)0 18 0 18;
 }</string>
          </property>
          <property name="maximum">
@@ -775,7 +775,7 @@
         <widget class="QSlider" name="FatToniBaseS_slider">
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_sat.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_sat.png)0 18 0 18;
 }</string>
          </property>
          <property name="maximum">
@@ -793,7 +793,7 @@
         <widget class="QSlider" name="FatToniBaseL_slider">
          <property name="styleSheet">
           <string notr="true">QSlider::groove:horizontal {
-    border-image: url(:/Resources/Sliders/slider_gray.png)0 18 0 18;
+    border-image: url(:../Resources/Sliders/slider_gray.png)0 18 0 18;
 }</string>
          </property>
          <property name="maximum">

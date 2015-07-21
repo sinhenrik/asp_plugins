@@ -47,4 +47,6 @@ Builds*
 *.sln
 *.vcproj
 *.pdb
+
+Resources
 push_to_remote

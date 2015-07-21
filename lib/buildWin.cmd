@@ -2,7 +2,7 @@
 if "%1" == "" goto noargs
 
 nmake clean
-qmake -spec C:\Qt\5.4\msvc2013\mkspecs\winrt-x86-msvc2013 -config %1
+qmake -spec C:\Qt\5.4\msvc2013\mkspecs\winrt-x86-msvc2013 -config %1 %2 %3 %4 %5 %6 %7 %8 %9
 nmake
 
 goto done
