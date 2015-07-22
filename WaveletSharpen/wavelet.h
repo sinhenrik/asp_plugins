@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void wavelet_sharpenF (float *fimg[3], const unsigned int width, const unsigned int height,
+extern void wavelet_sharpenF (float *fimg[3], const unsigned int width, const unsigned int height,
                  const float amount, const float radius);
 
 /*

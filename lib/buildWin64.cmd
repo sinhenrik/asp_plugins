@@ -1,14 +1,37 @@
 @echo off
-if "%1" == "" goto noargs
 
-nmake clean
-qmake -spec C:\Qt\5.4\msvc2013_64\mkspecs\winrt-x64-msvc2013 -config %1 %2 %3 %4 %5 %6 %7 %8 %9
-nmake
+if not exist "%1%" goto noproject
+if "%2" == "" goto noargs
+
+set CURR_DIR=%CD%
+echo Building from %CURR_DIR%
+
+set PROJECT=%~f1
+
+if not exist "..\Builds" mkdir "..\Builds"
+if not exist "..\Builds\Windows64" mkdir "..\Builds\Windows64"
+
+rem 
+cd "..\Builds\Windows64"
+
+echo Building %PROJECT% in %CD%
+
+qmake %PROJECT% -r -spec win32-msvc2013
+
+if "%2" == "debug" C:\Qt\Tools\QtCreator\bin\jom.exe -f Makefile.Debug
+if "%2" == "release" C:\Qt\Tools\QtCreator\bin\jom.exe -f Makefile.Release
+
+cd %CURR_DIR%
 
 goto done
 
 :noargs
-echo "No Arguments, Not Nice"
+echo No Build Arguments, type release or debug
+goto done
+
+:noproject
+echo First argument must be project
+goto done
 
 :done
 
