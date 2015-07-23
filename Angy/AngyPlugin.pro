@@ -4,6 +4,8 @@
 TARGET = Angy
 VERSION = 0.1
 
+QT += widgets
+
 include(../lib/includes.pri)
 include(../lib/fastmathinclude.pri)
 
