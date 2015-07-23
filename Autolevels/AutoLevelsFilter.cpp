@@ -96,6 +96,8 @@ QList<PluginDependency*> AutoLevelsFilter::prerequisites(const PluginImageSettin
     QSize size = settings.size(srcStep);
     QRect srcRect = QRect(QPoint(tile.x(), tile.y()), settings.tileSize());
 
+    Q_UNUSED(size);
+    
     QList<PluginDependency*> deps = settings.tilesIn(srcRect, srcStep);
     deps.append(settings.dependency(PLUGIN_NAME":"PLUGINDATA_NAME));
 

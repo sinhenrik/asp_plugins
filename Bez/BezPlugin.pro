@@ -7,8 +7,14 @@ TEMPLATE = lib
 #LIBS -= -lQtGui -lQtCore
 TARGET = Bez
 DEPENDPATH += .
-INCLUDEPATH += .
-INCLUDEPATH += ../Plugin
+
+QT += widgets 
+
+INCLUDEPATH += ../lib
+INCLUDEPATH += ../../Plugin_SDK_2014/Plugin
+
+include(../lib/includes.pri)
+include(../lib/fastmathinclude.pri)
 
 # Input
 HEADERS += BezPlugin.h BezFilterEARLY.h BezFilterLATE.h bezLoop.h colorspace.h sqrtlut.h
@@ -16,46 +22,14 @@ SOURCES += BezPlugin.cpp BezFilterEARLY.cpp BezFilterLATE.cpp
 
 # our header files
 HEADERS += \
-    ../PluginTools/ToolData.h \
+    ../lib/PluginTools/ToolData.h \
 
 # our source files
 SOURCES += \
-    ../PluginTools/ToolData.cpp
+    ../lib/PluginTools/ToolData.cpp
 
 #	UI Forms
 FORMS += Bez.ui
 
 RESOURCES += resources.qrc
 
-CONFIG(debug,debug|release) {
-	message( debug )
-
-	UI_DIR		=	build/objects/debug/ui
-	MOC_DIR		=	build/objects/debug/moc
-	OBJECTS_DIR	=	build/objects/debug/obj
-	RCC_DIR	    =	build/objects/debug/rcc
-	UI_HEADERS_DIR = build/objects/debug/uih
-	UI_SOURCES_DIR = build/objects/debug/uisrc
-}
-
-CONFIG(release,debug|release) {
-	message( release )
-
-	UI_DIR		=	build/objects/release/ui
-	MOC_DIR		=	build/objects/release/moc
-	OBJECTS_DIR	=	build/objects/release/obj
-	RCC_DIR	    =	build/objects/release/rcc
-	UI_HEADERS_DIR = build/objects/release/uih
-	UI_SOURCES_DIR = build/objects/release/uisrc
-}
-
-unix {
-!mac {
-   QMAKE_CFLAGS   += -m32 -mfpmath=sse -msse2
-   QMAKE_CXXFLAGS += -m32 -mfpmath=sse -msse2 
-   QMAKE_LFLAGS   += -m32 -mfpmath=sse -msse2
-   QMAKE_LIBS     += -L/usr/lib32
-}
-}
-
-#include( ../common/mac.pri )

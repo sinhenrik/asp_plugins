@@ -1,0 +1,6 @@
+#!/bin/bash
+
+../lib/buildLinux.sh $@
+
+#cp libDenoisePlugin.so.0.1.0 ~/.AfterShot/Plugins/Wavelet\ Denoise\ 32-bit.afplugin/lib
+#cp sph_wavelet_denoise.ui ~/'.AfterShot/Plugins/Wavelet Denoise 32-bit.afplugin/ui'
