@@ -1,0 +1,15 @@
+<!DOCTYPE PropertyScribe>
+<PropertyScribe xmlns="http://www.bibblelabs.com//PropertyScribe/" version="1">
+    <PluginFileData identifier="sph.angy" website="http://web.student.tuwien.ac.at/~e0326004/asp/" windowsLibFile="/home/sinhenrik/src/asp_plugins/Builds/Windows64/release/Angy0.dll" resourcesPath="" macLibFile="/home/sinhenrik/src/asp_plugins/Builds/MacOSX/release/libAngy.0.1.0.dylib" linuxLibFile="/home/sinhenrik/src/asp_plugins/Builds/Linux64/release/libAngy.so.0.1.0" author="Spoilerhead" minorVersion="0" bugfixVersion="30" name="Angy 64-bit" majorVersion="1" sdkVersion="8" dataVersion="1">
+        <StringList name="uiFiles">
+            <li>/home/sinhenrik/src/asp_plugins/Angy/AngyPlugin.ui</li>
+        </StringList>
+        <StringList name="localeFiles">
+            <li>/home/sinhenrik/src/asp_plugins/Angy/AngyPlugin_de.qm</li>
+            <li>/home/sinhenrik/src/asp_plugins/Angy/AngyPlugin_fr.qm</li>
+            <li>/home/sinhenrik/src/asp_plugins/Angy/AngyPlugin_it.qm</li>
+            <li>/home/sinhenrik/src/asp_plugins/Angy/AngyPlugin_ja.qm</li>
+            <li>/home/sinhenrik/src/asp_plugins/Angy/AngyPlugin_nl.qm</li>
+        </StringList>
+    </PluginFileData>
+</PropertyScribe>
