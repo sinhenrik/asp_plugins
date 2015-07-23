@@ -20,4 +20,4 @@ VERSION = 0.1
 HEADERS += LabCurvesFilterBefore.h LabCurvesFilterAfter.h LabCurvesPlugin.h srgblut.h
 SOURCES += LabCurvesFilterBefore.cpp LabCurvesFilterAfter.cpp LabCurvesPlugin.cpp 
 
-
+TRANSLATIONS = ./locale/LabCurves_en.ts ./locale/LabCurves_fr.ts

@@ -1,0 +1,11 @@
+<!DOCTYPE PropertyScribe>
+<PropertyScribe xmlns="http://www.bibblelabs.com//PropertyScribe/" version="1">
+    <PluginFileData identifier="com.roland65.LabTools" website="http://roland65.free.fr/asp" windowsLibFile="/home/sinhenrik/src/asp_plugins/Builds/Windows64/release/LabTools0.dll" resourcesPath="" macLibFile="/home/sinhenrik/src/asp_plugins/Builds/MacOSX/release/libLabTools.0.6.0.dylib" linuxLibFile="/home/sinhenrik/src/asp_plugins/Builds/Linux64/release/libLabTools.so.0.6.0" author="Roland Baudin" minorVersion="6" bugfixVersion="0" name="LabTools 64-bit" majorVersion="0" sdkVersion="8" dataVersion="1">
+        <StringList name="uiFiles">
+            <li>/home/sinhenrik/src/asp_plugins/LabTools/LabTools.ui</li>
+        </StringList>
+        <StringList name="localeFiles">
+            <li>/home/sinhenrik/src/asp_plugins/LabTools/locale/LabTools_fr.qm</li>
+        </StringList>
+    </PluginFileData>
+</PropertyScribe>

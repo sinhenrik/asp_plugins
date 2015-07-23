@@ -1,10 +1,8 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0">
 <context>
     <name>LabTools</name>
-    <message>
-        <source>LabTools</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Enable</source>
         <translation type="unfinished"></translation>
@@ -30,23 +28,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Contrast</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QSlider::groove:horizontal {border-image: url(:/images/slider_lightness.png)0 18 0 18;}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QSlider::groove:horizontal {border-image: url(:/images/slider_contrast.png)0 18 0 18;}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Saturation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>QSlider::groove:horizontal {border-image: url(:/images/slider_saturation.png)0 18 0 18;}</source>
+        <source>Contrast</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

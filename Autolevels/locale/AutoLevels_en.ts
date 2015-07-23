@@ -1,60 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="en_US">
 <context>
     <name>AutoLevelsForm</name>
     <message>
+        <location filename="../AutoLevels.ui" line="26"/>
         <source>Enable</source>
-        <translation type="unfinished">Activer</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevels.ui" line="71"/>
         <source>Disable filter and reset parameter values</source>
-        <translation type="unfinished">Désactiver le filtre et réinitialiser les paramètres</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevels.ui" line="87"/>
         <source>Display infos about the plugin</source>
-        <translation type="unfinished">Afficher les informations sur le plugin</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevels.ui" line="97"/>
         <source>Black</source>
-        <translation type="unfinished">Noir</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevels.ui" line="107"/>
         <source>White</source>
-        <translation type="unfinished">Blanc</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>AutoLevelsPlugin</name>
     <message>
+        <location filename="../AutoLevelsPlugin.cpp" line="78"/>
         <source>Enable plugin</source>
-        <translation type="unfinished">Activer le plugin</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevelsPlugin.cpp" line="78"/>
         <source>Enable AutoLevels plugin</source>
-        <translation type="unfinished">Activer le plugin AutoLevels</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevelsPlugin.cpp" line="79"/>
         <source>Min level</source>
-        <translation type="unfinished">Niveau min</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevelsPlugin.cpp" line="79"/>
         <source>Percentage of the image that will become pure black</source>
-        <translation type="unfinished">Pourcentage de l&apos;image qui deviendra du noir pur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevelsPlugin.cpp" line="80"/>
         <source>Max level</source>
-        <translation type="unfinished">Niveau max</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevelsPlugin.cpp" line="80"/>
         <source>Percentage of the image that will become pure white</source>
-        <translation type="unfinished">Pourcentage de l&apos;image qui deviendra du blanc pur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevelsPlugin.cpp" line="154"/>
         <source>AutoLevels Plugin</source>
-        <translation type="unfinished">Plugin AutoLevels</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../AutoLevelsPlugin.cpp" line="155"/>
         <source>AutoLevels Plugin version 0.3
 =====================
 
@@ -67,18 +80,7 @@ This is the same function as the builtin AutoLevel, but placed later in the filt
 AutoLevels 0.3
 Copyright (C) 2012 Roland Baudin
 http://roland65.free.fr</source>
-        <translation>Plugin AutoLevels version 0.3
-=====================
-
-Ce plugin simple réalise la fonction niveau automatiques.
-
-L&apos;histogramme de l&apos;image est étiré de façon à ce qu&apos;un pourcentage de l&apos;image (contrôle Noir) devienne du noir pur, et qu&apos;un autre pourcentage de l&apos;image (contrôle Blanc) devienne du blanc pur.
-
-Il s&apos;agit de la même fonction que la fonction intégrée Niveaux Auto, mais placée plus haut dans la pile des filtres.
-
-AutoLevels 0.3
-Copyright (C) 2012 Roland Baudin
-http://roland65.free.fr</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

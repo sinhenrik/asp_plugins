@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="en_US">
 <context>
     <name>LabCurves</name>
     <message>
+        <location filename="../LabCurves.ui" line="49"/>
         <source>Enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../LabCurves.ui" line="68"/>
         <source>Disable filter and reset parameter values</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../LabCurves.ui" line="74"/>
         <source>Reset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../LabCurves.ui" line="99"/>
         <source>Displays infos about the plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../LabCurves.ui" line="102"/>
         <source>About...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../LabCurves.ui" line="190"/>
         <source>a, b scale</source>
         <translation type="unfinished"></translation>
     </message>
@@ -31,26 +37,32 @@
 <context>
     <name>LabCurvesPlugin</name>
     <message>
+        <location filename="../LabCurvesPlugin.cpp" line="76"/>
         <source>Enable plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../LabCurvesPlugin.cpp" line="76"/>
         <source>Enable LabCurves plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>LabCurves Plugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location filename="../LabCurvesPlugin.cpp" line="77"/>
         <source>a,b scale</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../LabCurvesPlugin.cpp" line="77"/>
         <source>Scale factor for a and b channels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../LabCurvesPlugin.cpp" line="146"/>
+        <source>LabCurves Plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LabCurvesPlugin.cpp" line="147"/>
         <source>LabCurves Plugin version 0.1
 =====================
 

@@ -22,6 +22,7 @@ VERSION = 0.3
 HEADERS += AutoLevelsFilter.h AutoLevelsData.h AutoLevelsPlugin.h srgblut.h
 SOURCES += AutoLevelsFilter.cpp AutoLevelsData.cpp AutoLevelsPlugin.cpp 
 
+TRANSLATIONS = ./locale/AutoLevels_en.ts ./locale/AutoLevels_fr.ts
 
 
 

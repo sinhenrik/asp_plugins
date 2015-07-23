@@ -1,0 +1,11 @@
+<!DOCTYPE PropertyScribe>
+<PropertyScribe xmlns="http://www.bibblelabs.com//PropertyScribe/" version="1">
+    <PluginFileData identifier="com.roland65.LabCurves" website="http://roland65.free.fr/asp" windowsLibFile="/home/sinhenrik/src/asp_plugins/Builds/Windows64/release/LabCurves0.dll" resourcesPath="" macLibFile="/home/sinhenrik/src/asp_plugins/Builds/MacOSX/release/libLabCurves.0.1.0.dylib" linuxLibFile="/home/sinhenrik/src/asp_plugins/Builds/Linux64/release/libLabCurves.so.0.1.0" author="Roland Baudin" minorVersion="1" bugfixVersion="0" name="LabCurves 64-bit" majorVersion="0" sdkVersion="8" dataVersion="1">
+        <StringList name="uiFiles">
+            <li>/home/sinhenrik/src/asp_plugins/LabCurves/LabCurves.ui</li>
+        </StringList>
+        <StringList name="localeFiles">
+            <li>/home/sinhenrik/src/asp_plugins/LabCurves/locale/LabCurves_fr.qm</li>
+        </StringList>
+    </PluginFileData>
+</PropertyScribe>

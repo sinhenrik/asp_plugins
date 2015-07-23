@@ -1,53 +1,39 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0">
 <context>
     <name>LabTools</name>
     <message>
-        <source>LabTools</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Enable</source>
-        <translation>Activer</translation>
+        <translation type="unfinished">Activer</translation>
     </message>
     <message>
         <source>Disable filter and reset parameter values</source>
-        <translation>Désactiver le plugin et réinitialiser les valeurs des paramètres</translation>
+        <translation type="unfinished">Désactiver le plugin et réinitialiser les valeurs des paramètres</translation>
     </message>
     <message>
         <source>Reset</source>
-        <translation>Reset</translation>
+        <translation type="unfinished">Reset</translation>
     </message>
     <message>
         <source>Displays infos about the plugin</source>
-        <translation>Afficher les informations sur ce plugin</translation>
+        <translation type="unfinished">Afficher les informations sur ce plugin</translation>
     </message>
     <message>
         <source>About...</source>
-        <translation>À propos...</translation>
+        <translation type="unfinished">À propos...</translation>
     </message>
     <message>
         <source>Lightness</source>
-        <translation>Luminosité</translation>
+        <translation type="unfinished">Luminosité</translation>
     </message>
     <message>
         <source>Contrast</source>
-        <translation>Contraste</translation>
-    </message>
-    <message>
-        <source>QSlider::groove:horizontal {border-image: url(:/images/slider_lightness.png)0 18 0 18;}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QSlider::groove:horizontal {border-image: url(:/images/slider_contrast.png)0 18 0 18;}</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Contraste</translation>
     </message>
     <message>
         <source>Saturation</source>
-        <translation>Saturation</translation>
-    </message>
-    <message>
-        <source>QSlider::groove:horizontal {border-image: url(:/images/slider_saturation.png)0 18 0 18;}</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Saturation</translation>
     </message>
 </context>
 <context>

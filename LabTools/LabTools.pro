@@ -20,3 +20,4 @@ VERSION = 0.6
 HEADERS += LabToolsFilter.h LabToolsPlugin.h fastmath.h
 SOURCES += LabToolsFilter.cpp LabToolsPlugin.cpp 
 
+TRANSLATIONS = ./locale/LabTools_en.ts ./locale/LabTools_fr.ts

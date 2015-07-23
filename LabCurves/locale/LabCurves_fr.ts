@@ -1,10 +1,8 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0">
 <context>
     <name>LabCurves</name>
-    <message>
-        <source>LabCurves</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Enable</source>
         <translation>Activer</translation>
@@ -24,10 +22,6 @@
     <message>
         <source>About...</source>
         <translation>À propos...</translation>
-    </message>
-    <message>
-        <source>QSlider::groove:horizontal {border-image: url(:/images/slider_amp.png)0 18 0 18;}</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>a, b scale</source>
