@@ -1,0 +1,2491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>Bez_ferd</class>
+  <widget class="SettingsWidget" name="Bez_ferd">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>218</width>
+        <height>634</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>Bez V1.0.1</string>
+    </property>
+    <property name="BIBBLE_PLUGIN_NAME" stdset="0">
+      <string>Bez</string>
+    </property>
+    <property name="BIBBLE_PLUGIN_GROUP" stdset="0">
+      <string>ferd</string>
+    </property>
+
+    <!-- Total Layout -->
+    <layout class="QVBoxLayout" name="bez_enable_verticalLayout">
+      <property name="spacing">
+        <number>0</number>
+      </property>
+      <property name="margin">
+        <number>2</number>
+      </property>
+
+      <!-- Enable Layout -->
+      <item>
+        <layout class="QHBoxLayout" name="bez_enable_horizontallayout">
+          <property name="spacing">
+            <number>2</number>
+          </property>
+          <property name="leftMargin">
+            <number>2</number>
+          </property>
+          <property name="rightMargin">
+            <number>2</number>
+          </property>
+          <property name="bottomMargin">
+            <number>2</number>
+          </property>
+
+          <!-- Enable Check -->
+          <item>
+            <widget class="QCheckBox" name="bez_enabled_check">
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>7</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="toolTip">
+                <string>Enable this Plugin</string>
+              </property>
+              <property name="text">
+                <string>On</string>
+              </property>
+              <property name="shortcut">
+                <string/>
+              </property>
+            </widget>
+          </item>
+
+          <!-- Early Check -->
+          <item>
+            <widget class="QCheckBox" name="bez_Early_check">
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>8</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="toolTip">
+                <string>Run Bez Early in the Pipe before Lab</string>
+              </property>
+              <property name="text">
+                <string>Early</string>
+              </property>
+              <property name="shortcut">
+                <string/>
+              </property>
+            </widget>
+          </item>
+
+          <!-- HCL Check -->
+          <item>
+            <widget class="QCheckBox" name="bez_HCL_check">
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>7</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="toolTip">
+                <string>Convert to B and W</string>
+              </property>
+              <property name="text">
+                <string>HCL</string>
+              </property>
+              <property name="shortcut">
+                <string/>
+              </property>
+            </widget>
+          </item>
+
+          <!-- B5 Import Button -->
+          <item>
+            <widget class="QPushButton" name="bez_importb5_button">
+              <!--
+              <property name="styleSheet">
+                <string notr="true">
+                  QToolButton {border: 1px solid #000000;border-radius: 3px; background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #555555, stop: 1 #333333); color: #cccccc;}
+                  QToolButton:pressed {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #333333, stop: 1 #555555);}
+                  QToolButton:flat {border: none; }
+                  QToolButton:default {border-color: navy; }
+                </string>
+              </property>
+              -->
+              <property name="toolTip">
+                <string>Import Bez B5 Settings.</string>
+              </property>
+              <property name="text">
+                <string>B5</string>
+              </property>
+            </widget>
+          </item>
+
+          <!-- Reset Button -->
+          <item>
+            <widget class="QPushButton" name="bez_reset_button">
+              <property name="toolTip">
+                <string>Reset plug-in to start-up values.</string>
+              </property>
+              <property name="text">
+                <string>Reset</string>
+              </property>
+            </widget>
+          </item>
+
+          <!-- About Button -->
+          <item>
+            <widget class="QPushButton" name="bez_about_button">
+              <property name="toolTip">
+                <string>Get information about this plug-in.</string>
+              </property>
+              <property name="text">
+                <string>Info</string>
+              </property>
+            </widget>
+          </item>
+
+        </layout>
+      </item>
+
+      <!-- Opacity and Saturation Group Box -->
+      <item>
+        <widget class="QGroupBox" name="bez_opacity_saturation_groupBox">
+          <property name="styleSheet">
+            <string notr="true">
+              QGroupBox {
+              margin-bottom: 2px; margin-top: 2px;
+              }
+              QGroupBox::title {background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);border: 2px solid #C4C4C3; border-bottom-color: #C2C7CB; border-top-left-radius: 4px; border-top-right-radius: 4px; min-width: 8ex; padding: 1px; color: #222222;}
+            </string>
+          </property>
+          <property name="enabled">
+            <bool>true</bool>
+          </property>
+          <!-- <property name="title">
+            <string>Opacity and Saturation</string>
+          </property> -->
+          <layout class="QGridLayout" name="bez_opacity_saturation_gridLayout">
+            <property name="leftMargin">
+              <number>2</number>
+            </property>
+            <property name="topMargin">
+              <number>2</number>
+            </property>
+            <property name="rightMargin">
+              <number>2</number>
+            </property>
+            <property name="bottomMargin">
+              <number>2</number>
+            </property>
+            <property name="spacing">
+              <number>2</number>
+            </property>
+
+            <!-- opacity label -->
+            <item row="0" column="0">
+              <widget class="QLabel" name="bez_opacity_label">
+                <property name="text">
+                  <string>Opacity</string>
+                </property>
+                <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="wordWrap">
+                  <bool>false</bool>
+                </property>
+              </widget>
+            </item>
+
+            <!-- opacity slider -->
+            <item row="0" column="1">
+              <widget class="QSlider" name="bez_opacity_slider">
+                <property name="styleSheet">
+                  <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_gray.png)0 18 0 18;}</string>
+                </property>
+                <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                  <size>
+                    <width>0</width>
+                    <height>0</height>
+                  </size>
+                </property>
+                <property name="maximumSize">
+                  <size>
+                    <width>32767</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum">
+                  <number>0</number>
+                </property>
+                <property name="maximum">
+                  <number>100</number>
+                </property>
+                <property name="value">
+                  <number>100</number>
+                </property>
+                <property name="singleStep">
+                  <number>1</number>
+                </property>
+                <property name="pageStep">
+                  <number>10</number>
+                </property>
+                <property name="lineStep" stdset="0">
+                  <number>10</number>
+                </property>
+                <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                </property>
+              </widget>
+            </item>
+
+            <!-- opacity edit -->
+            <item row="0" column="2">
+              <widget class="QSpinBox" name="bez_opacity_edit">
+                <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="maximumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum" >
+                  <number>0</number>
+                </property>
+                <property name="maximum" >
+                  <number>100</number>
+                </property>
+                <property name="alignment" >
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="value" >
+                  <number>100</number>
+                </property>
+              </widget>
+            </item>
+
+            <!-- saturation label -->
+            <item row="1" column="0">
+              <widget class="QLabel" name="bez_saturation_label">
+                <property name="text">
+                  <string>Saturation</string>
+                </property>
+                <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="wordWrap">
+                  <bool>false</bool>
+                </property>
+              </widget>
+            </item>
+
+            <!-- saturation slider -->
+            <item row="1" column="1">
+              <widget class="QSlider" name="bez_saturation_slider">
+                <property name="styleSheet">
+                  <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_saturation.png)0 18 0 18;}</string>
+                </property>
+                <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                  <size>
+                    <width>0</width>
+                    <height>0</height>
+                  </size>
+                </property>
+                <property name="maximumSize">
+                  <size>
+                    <width>32767</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum">
+                  <number>0</number>
+                </property>
+                <property name="maximum">
+                  <number>250</number>
+                </property>
+                <property name="singleStep">
+                  <number>1</number>
+                </property>
+                <property name="value">
+                  <number>100</number>
+                </property>
+                <property name="lineStep" stdset="0">
+                  <number>10</number>
+                </property>
+                <property name="pageStep">
+                  <number>10</number>
+                </property>
+                <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                </property>
+              </widget>
+            </item>
+
+            <!-- saturation edit -->
+            <item row="1" column="2">
+              <widget class="QSpinBox" name="bez_saturation_edit">
+                <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="maximumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum" >
+                  <number>0</number>
+                </property>
+                <property name="maximum" >
+                  <number>250</number>
+                </property>
+                <property name="alignment" >
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="value" >
+                  <number>100</number>
+                </property>
+              </widget>
+            </item>
+
+          </layout>
+        </widget>
+      </item>
+      
+      <!-- Lighten and Midtones Group Box -->
+      <item>
+        <widget class="QGroupBox" name="bez_midi_contrast_groupBox">
+          <property name="styleSheet">
+            <string notr="true">
+              QGroupBox {
+              margin-bottom: 5px; margin-top: 2px;
+              }
+              QGroupBox::title {background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);border: 2px solid #C4C4C3; border-bottom-color: #C2C7CB; border-top-left-radius: 4px; border-top-right-radius: 4px; min-width: 8ex; padding: 1px; color: #222222;}
+            </string>
+          </property>
+          <property name="enabled">
+            <bool>true</bool>
+          </property>
+          <!-- <property name="title">
+            <string>Lighten and Midtones</string>
+          </property> -->
+          <layout class="QGridLayout" name="bez_midi_contrast_gridLayout">
+            <property name="leftMargin">
+              <number>2</number>
+            </property>
+            <property name="topMargin">
+              <number>2</number>
+            </property>
+            <property name="rightMargin">
+              <number>2</number>
+            </property>
+            <property name="bottomMargin">
+              <number>2</number>
+            </property>
+            <property name="spacing">
+              <number>2</number>
+            </property>
+
+            <!-- lightensigmoidal label -->
+            <item row="0" column="0">
+              <widget class="QLabel" name="bez_lighten_label">
+                <property name="text">
+                  <string>Lighten Sig</string>
+                </property>
+                <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="wordWrap">
+                  <bool>false</bool>
+                </property>
+              </widget>
+            </item>
+
+            <!-- lightensigmoidal slider -->
+            <item row="0" column="1">
+              <widget class="QSlider" name="bez_lighten_slider">
+                <property name="styleSheet">
+                  <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_gray.png)0 18 0 18;}</string>
+                </property>
+                <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                  <size>
+                    <width>0</width>
+                    <height>0</height>
+                  </size>
+                </property>
+                <property name="maximumSize">
+                  <size>
+                    <width>32767</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum">
+                  <number>0</number>
+                </property>
+                <property name="maximum">
+                  <number>100</number>
+                </property>
+                <property name="singleStep">
+                  <number>1</number>
+                </property>
+                <property name="lineStep" stdset="0">
+                  <number>10</number>
+                </property>
+                <property name="pageStep">
+                  <number>10</number>
+                </property>
+                <property name="value">
+                  <number>0</number>
+                </property>
+                <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                </property>
+              </widget>
+            </item>
+
+            <!-- lightensigmoidal edit -->
+            <item row="0" column="2">
+              <widget class="QSpinBox" name="bez_lighten_edit">
+                <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="maximumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum" >
+                  <number>0</number>
+                </property>
+                <property name="maximum" >
+                  <number>100</number>
+                </property>
+                <property name="alignment" >
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="value" >
+                  <number>0</number>
+                </property>
+              </widget>
+            </item>
+
+            <!-- lightengamma label -->
+            <item row="1" column="0">
+              <widget class="QLabel" name="bez_lightengamma_label">
+                <property name="text">
+                  <string>Lighten Gam</string>
+                </property>
+                <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="wordWrap">
+                  <bool>false</bool>
+                </property>
+              </widget>
+            </item>
+
+            <!-- lightengamma slider -->
+            <item row="1" column="1">
+              <widget class="QSlider" name="bez_lightengamma_slider">
+                <property name="styleSheet">
+                  <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_gray.png)0 18 0 18;}</string>
+                </property>
+                <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                  <size>
+                    <width>0</width>
+                    <height>0</height>
+                  </size>
+                </property>
+                <property name="maximumSize">
+                  <size>
+                    <width>32767</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum">
+                  <number>0</number>
+                </property>
+                <property name="maximum">
+                  <number>100</number>
+                </property>
+                <property name="singleStep">
+                  <number>1</number>
+                </property>
+                <property name="pageStep">
+                  <number>10</number>
+                </property>
+                <property name="value">
+                  <number>0</number>
+                </property>
+                <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                </property>
+              </widget>
+            </item>
+
+            <!-- lightengamma edit -->
+            <item row="1" column="2">
+              <widget class="QSpinBox" name="bez_lightengamma_edit">
+                <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="maximumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum" >
+                  <number>0</number>
+                </property>
+                <property name="maximum" >
+                  <number>100</number>
+                </property>
+                <property name="alignment" >
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="value" >
+                  <number>0</number>
+                </property>
+              </widget>
+            </item>
+
+            <!-- midi label -->
+            <item row="2" column="0">
+              <widget class="QLabel" name="bez_midi_label">
+                <property name="text">
+                  <string>Midtones</string>
+                </property>
+                <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="wordWrap">
+                  <bool>false</bool>
+                </property>
+              </widget>
+            </item>
+
+            <!-- midi slider -->
+            <item row="2" column="1">
+              <widget class="QSlider" name="bez_midi_slider">
+                <property name="styleSheet">
+                  <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_gray.png)0 18 0 18;}</string>
+                </property>
+                <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                  <size>
+                    <width>0</width>
+                    <height>0</height>
+                  </size>
+                </property>
+                <property name="maximumSize">
+                  <size>
+                    <width>32767</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum">
+                  <number>0</number>
+                </property>
+                <property name="maximum">
+                  <number>100</number>
+                </property>
+                <property name="singleStep">
+                  <number>1</number>
+                </property>
+                <property name="pageStep">
+                  <number>10</number>
+                </property>
+                <property name="value">
+                  <number>50</number>
+                </property>
+                <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                </property>
+              </widget>
+            </item>
+
+            <!-- midi edit -->
+            <item row="2" column="2">
+              <widget class="QSpinBox" name="bez_midi_edit">
+                <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="maximumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum" >
+                  <number>0</number>
+                </property>
+                <property name="maximum" >
+                  <number>100</number>
+                </property>
+                <property name="alignment" >
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="value" >
+                  <number>50</number>
+                </property>
+              </widget>
+            </item>
+
+            <!-- sigcontrast label -->
+            <item row="3" column="0">
+              <widget class="QLabel" name="bez_sigcontrast_label">
+                <property name="text">
+                  <string>Sig Contrast</string>
+                </property>
+                <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="wordWrap">
+                  <bool>false</bool>
+                </property>
+              </widget>
+            </item>
+
+            <!-- sigcontrast slider -->
+            <item row="3" column="1">
+              <widget class="QSlider" name="bez_sigcontrast_slider">
+                <property name="styleSheet">
+                  <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_contrast.png)0 18 0 18;}</string>
+                </property>
+                <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                  <size>
+                    <width>0</width>
+                    <height>0</height>
+                  </size>
+                </property>
+                <property name="maximumSize">
+                  <size>
+                    <width>32767</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum">
+                  <number>-100</number>
+                </property>
+                <property name="maximum">
+                  <number>100</number>
+                </property>
+                <property name="singleStep">
+                  <number>1</number>
+                </property>
+                <property name="pageStep">
+                  <number>10</number>
+                </property>
+                <property name="value">
+                  <number>0</number>
+                </property>
+                <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                </property>
+              </widget>
+            </item>
+
+            <!-- sigcontrast edit -->
+            <item row="3" column="2">
+              <widget class="QSpinBox" name="bez_sigcontrast_edit">
+                <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="maximumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum" >
+                  <number>-100</number>
+                </property>
+                <property name="maximum" >
+                  <number>100</number>
+                </property>
+                <property name="alignment" >
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="value" >
+                  <number>0</number>
+                </property>
+              </widget>
+            </item>
+
+            <!-- sigmiddle label -->
+            <item row="4" column="0">
+              <widget class="QLabel" name="bez_sigmiddle_label">
+                <property name="text">
+                  <string>Sig Middle</string>
+                </property>
+                <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="wordWrap">
+                  <bool>false</bool>
+                </property>
+              </widget>
+            </item>
+
+            <!-- sigmiddle slider -->
+            <item row="4" column="1">
+              <widget class="QSlider" name="bez_sigmiddle_slider">
+                <property name="styleSheet">
+                  <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_gray.png)0 18 0 18;}</string>
+                </property>
+                <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                  <size>
+                    <width>0</width>
+                    <height>0</height>
+                  </size>
+                </property>
+                <property name="maximumSize">
+                  <size>
+                    <width>32767</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum">
+                  <number>0</number>
+                </property>
+                <property name="maximum">
+                  <number>100</number>
+                </property>
+                <property name="singleStep">
+                  <number>1</number>
+                </property>
+                <property name="pageStep">
+                  <number>10</number>
+                </property>
+                <property name="value">
+                  <number>50</number>
+                </property>
+                <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                </property>
+              </widget>
+            </item>
+
+            <!-- sigmiddle edit -->
+            <item row="4" column="2">
+              <widget class="QSpinBox" name="bez_sigmiddle_edit">
+                <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="minimumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="maximumSize" >
+                  <size>
+                    <width>46</width>
+                    <height>18</height>
+                  </size>
+                </property>
+                <property name="minimum" >
+                  <number>0</number>
+                </property>
+                <property name="maximum" >
+                  <number>100</number>
+                </property>
+                <property name="alignment" >
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="value" >
+                  <number>50</number>
+                </property>
+              </widget>
+            </item>
+
+          </layout>
+
+        </widget>
+      </item>
+
+      <!-- overall curves tab widget -->
+      <item>
+        <widget class="QTabWidget" name="curvestabWidget">
+          <property name="styleSheet">
+        <string notr="true">
+          QTabWidget::pane { border-top: 1px solid #111111;}
+          QTabWidget::tab-bar {left: 2px; }
+          QTabBar::tab {background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #444444, stop: 0.5 #333333, stop: 1.0 #222222);  border: 1px solid #111111;  border-bottom-color: #111111; border-top-left-radius: 4px; border-top-right-radius: 4px; min-width: 8ex; padding-left: 2px; padding-right: 2px; color: #aaaaaa;}
+          QTabBar::tab:selected, QTabBar::tab:hover {background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #666666, stop: 0.5 #555555, stop: 1.0 #444444); color: #eeeeee;}
+          QTabBar::tab:selected {border-color: #111111;border-bottom-color: #111111;}
+          QTabBar::tab:!selected {margin-top: 3px; }
+          QTabBar::tab:selected {margin-left: 0px;margin-right: 0px;}
+          QTabBar::tab:first:selected {margin-left: 0; }
+          QTabBar::tab:last:selected {margin-right: 0; }
+          QTabBar::tab:only-one {margin: 0; }
+        </string>
+      </property>
+          <property name="enabled">
+        <bool>true</bool>
+      </property>
+          <property name="tabShape">
+        <enum>QTabWidget::Triangular</enum>
+      </property>
+          <property name="currentIndex">
+        <number>0</number>
+      </property>
+          <property name="elideMode">
+        <enum>Qt::ElideLeft</enum>
+      </property>
+
+          <!-- 5 Curves TAB -->
+          <widget class="QWidget" name="5ToneTab">
+        <attribute name="title">
+          <string>5 Tone Narrow Curve</string>
+        </attribute>
+
+        <layout class="QGridLayout" name="gridLayout5curves">
+          <property name="spacing">
+            <number>2</number>
+          </property>
+          <property name="topMargin">
+            <number>2</number>
+          </property>
+          <property name="leftMargin">
+            <number>2</number>
+          </property>
+          <property name="rightMargin">
+            <number>2</number>
+          </property>
+          <property name="bottomMargin">
+            <number>2</number>
+          </property>
+
+          <!-- 5 shadows label -->
+          <item row="0" column="0">
+            <widget class="QLabel" name="bez_shadows_label">
+              <property name="text">
+                <string>Shadows</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 shadows slider -->
+          <item row="0" column="1">
+            <widget class="QSlider" name="bez_shadows_slider">
+              <property name="styleSheet">
+                <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_5-1.png)0 18 0 18;}</string>
+              </property>
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum">
+                <number>-20</number>
+              </property>
+              <property name="maximum">
+                <number>120</number>
+              </property>
+              <property name="value">
+                <number>10</number>
+              </property>
+              <property name="singleStep">
+                <number>1</number>
+              </property>
+              <property name="pageStep">
+                <number>10</number>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 shadows edit -->
+          <item row="0" column="2">
+            <widget class="QSpinBox" name="bez_shadows_edit">
+              <property name="sizePolicy" >
+                <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="maximumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum" >
+                <number>-20</number>
+              </property>
+              <property name="maximum" >
+                <number>120</number>
+              </property>
+              <property name="value" >
+                <number>10</number>
+              </property>
+              <property name="alignment" >
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 lowmids label -->
+          <item row="1" column="0">
+            <widget class="QLabel" name="bez_lowmids_label">
+              <property name="text">
+                <string>Low Mids</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 lowmids slider -->
+          <item row="1" column="1">
+            <widget class="QSlider" name="bez_lowmids_slider">
+              <property name="styleSheet">
+                <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_5-2.png)0 18 0 18;}</string>
+              </property>
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum">
+                <number>-20</number>
+              </property>
+              <property name="maximum">
+                <number>120</number>
+              </property>
+              <property name="value">
+                <number>30</number>
+              </property>
+              <property name="singleStep">
+                <number>1</number>
+              </property>
+              <property name="pageStep">
+                <number>10</number>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 lowmids edit -->
+          <item row="1" column="2">
+            <widget class="QSpinBox" name="bez_lowmids_edit">
+              <property name="sizePolicy" >
+                <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="maximumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum" >
+                <number>-20</number>
+              </property>
+              <property name="maximum" >
+                <number>120</number>
+              </property>
+              <property name="value" >
+                <number>30</number>
+              </property>
+              <property name="alignment" >
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 greys label -->
+          <item row="2" column="0">
+            <widget class="QLabel" name="bez_greys_label">
+              <property name="text">
+                <string>Greys</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 greys slider -->
+          <item row="2" column="1">
+            <widget class="QSlider" name="bez_greys_slider">
+              <property name="styleSheet">
+                <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_5-3.png)0 18 0 18;}</string>
+              </property>
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum">
+                <number>-20</number>
+              </property>
+              <property name="maximum">
+                <number>120</number>
+              </property>
+              <property name="value">
+                <number>50</number>
+              </property>
+              <property name="singleStep">
+                <number>1</number>
+              </property>
+              <property name="pageStep">
+                <number>10</number>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 greys edit -->
+          <item row="2" column="2">
+            <widget class="QSpinBox" name="bez_greys_edit">
+              <property name="sizePolicy" >
+                <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="maximumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum" >
+                <number>-20</number>
+              </property>
+              <property name="maximum" >
+                <number>120</number>
+              </property>
+              <property name="value" >
+                <number>50</number>
+              </property>
+              <property name="alignment" >
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 highmids label -->
+          <item row="3" column="0">
+            <widget class="QLabel" name="bez_highmids_label">
+              <property name="text">
+                <string>High Mids</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 highmids slider -->
+          <item row="3" column="1">
+            <widget class="QSlider" name="bez_highmids_slider">
+              <property name="styleSheet">
+                <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_5-4.png)0 18 0 18;}</string>
+              </property>
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum">
+                <number>-20</number>
+              </property>
+              <property name="maximum">
+                <number>120</number>
+              </property>
+              <property name="value">
+                <number>70</number>
+              </property>
+              <property name="singleStep">
+                <number>1</number>
+              </property>
+              <property name="pageStep">
+                <number>10</number>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 highmids edit -->
+          <item row="3" column="2">
+            <widget class="QSpinBox" name="bez_highmids_edit">
+              <property name="sizePolicy" >
+                <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="maximumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum" >
+                <number>-20</number>
+              </property>
+              <property name="maximum" >
+                <number>120</number>
+              </property>
+              <property name="value" >
+                <number>70</number>
+              </property>
+              <property name="alignment" >
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 highlights label -->
+          <item row="4" column="0">
+            <widget class="QLabel" name="bez_highlights_label">
+              <property name="text">
+                <string>Highlights</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 highlights slider -->
+          <item row="4" column="1">
+            <widget class="QSlider" name="bez_highlights_slider">
+              <property name="styleSheet">
+                <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_5-5.png)0 18 0 18;}</string>
+              </property>
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum">
+                <number>-20</number>
+              </property>
+              <property name="maximum">
+                <number>120</number>
+              </property>
+              <property name="value">
+                <number>90</number>
+              </property>
+              <property name="singleStep">
+                <number>1</number>
+              </property>
+              <property name="pageStep">
+                <number>10</number>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 5 highlights edit -->
+          <item row="4" column="2">
+            <widget class="QSpinBox" name="bez_highlights_edit">
+              <property name="sizePolicy" >
+                <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="maximumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum" >
+                <number>-20</number>
+              </property>
+              <property name="maximum" >
+                <number>120</number>
+              </property>
+              <property name="value" >
+                <number>90</number>
+              </property>
+              <property name="alignment" >
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </widget>
+
+          <!-- 4 Curves TAB -->
+          <widget class="QWidget" name="4ToneTab">
+        <attribute name="title">
+          <string>4 Tone Wide Curve</string>
+        </attribute>
+
+        <layout class="QGridLayout" name="gridLayout4curves">
+          <property name="spacing">
+            <number>2</number>
+          </property>
+          <property name="leftMargin">
+            <number>2</number>
+          </property>
+          <property name="rightMargin">
+            <number>2</number>
+          </property>
+          <property name="bottomMargin">
+            <number>2</number>
+          </property>
+
+          <!-- 4 shadows label -->
+          <item row="0" column="0">
+            <widget class="QLabel" name="bez_shadows4_label">
+              <property name="text">
+                <string>Shadows</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 shadows slider -->
+          <item row="0" column="1">
+            <widget class="QSlider" name="bez_shadows4_slider">
+              <property name="styleSheet">
+                <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_4-1.png)0 18 0 18;}</string>
+              </property>
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum">
+                <number>-20</number>
+              </property>
+              <property name="maximum">
+                <number>120</number>
+              </property>
+              <property name="value">
+                <number>20</number>
+              </property>
+              <property name="singleStep">
+                <number>1</number>
+              </property>
+              <property name="pageStep">
+                <number>10</number>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 shadows edit -->
+          <item row="0" column="2">
+            <widget class="QSpinBox" name="bez_shadows4_edit">
+              <property name="sizePolicy" >
+                <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="maximumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum" >
+                <number>-20</number>
+              </property>
+              <property name="maximum" >
+                <number>120</number>
+              </property>
+              <property name="value" >
+                <number>20</number>
+              </property>
+              <property name="alignment" >
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 lowmids label -->
+          <item row="1" column="0">
+            <widget class="QLabel" name="bez_lowmids4_label">
+              <property name="text">
+                <string>Low Mids</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 lowmids  -->
+          <item row="1" column="1">
+            <widget class="QSlider" name="bez_lowmids4_slider">
+              <property name="styleSheet">
+                <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_4-2.png)0 18 0 18;}</string>
+              </property>
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum">
+                <number>-20</number>
+              </property>
+              <property name="maximum">
+                <number>120</number>
+              </property>
+              <property name="value">
+                <number>40</number>
+              </property>
+              <property name="singleStep">
+                <number>1</number>
+              </property>
+              <property name="pageStep">
+                <number>10</number>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 lowmids edit -->
+          <item row="1" column="2">
+            <widget class="QSpinBox" name="bez_lowmids4_edit">
+              <property name="sizePolicy" >
+                <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="maximumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum" >
+                <number>-20</number>
+              </property>
+              <property name="maximum" >
+                <number>120</number>
+              </property>
+              <property name="value" >
+                <number>40</number>
+              </property>
+              <property name="alignment" >
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 highmids label -->
+          <item row="2" column="0">
+            <widget class="QLabel" name="bez_highmids4_label">
+              <property name="text">
+                <string>High Mids</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 highmids slider -->
+          <item row="2" column="1">
+            <widget class="QSlider" name="bez_highmids4_slider">
+              <property name="styleSheet">
+                <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_4-3.png)0 18 0 18;}</string>
+              </property>
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum">
+                <number>-20</number>
+              </property>
+              <property name="maximum">
+                <number>120</number>
+              </property>
+              <property name="value">
+                <number>60</number>
+              </property>
+              <property name="singleStep">
+                <number>1</number>
+              </property>
+              <property name="pageStep">
+                <number>10</number>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 highmids edit -->
+          <item row="2" column="2">
+            <widget class="QSpinBox" name="bez_highmids4_edit">
+              <property name="sizePolicy" >
+                <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="maximumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum" >
+                <number>-20</number>
+              </property>
+              <property name="maximum" >
+                <number>120</number>
+              </property>
+              <property name="value" >
+                <number>60</number>
+              </property>
+              <property name="alignment" >
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 highlights label -->
+          <item row="3" column="0">
+            <widget class="QLabel" name="bez_highlights4_label">
+              <property name="text">
+                <string>Highlights</string>
+              </property>
+              <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+                <bool>false</bool>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 highlights slider -->
+          <item row="3" column="1">
+            <widget class="QSlider" name="bez_highlights4_slider">
+              <property name="styleSheet">
+                <string notr="true">QSlider::groove:horizontal {border-image: url(:/img/slider_4-4.png)0 18 0 18;}</string>
+              </property>
+              <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="maximumSize">
+                <size>
+                  <width>32767</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum">
+                <number>-20</number>
+              </property>
+              <property name="maximum">
+                <number>120</number>
+              </property>
+              <property name="value">
+                <number>80</number>
+              </property>
+              <property name="singleStep">
+                <number>1</number>
+              </property>
+              <property name="pageStep">
+                <number>10</number>
+
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </widget>
+          </item>
+
+          <!-- 4 highlights edit -->
+          <item row="3" column="2">
+            <widget class="QSpinBox" name="bez_highlights4_edit">
+              <property name="sizePolicy" >
+                <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="maximumSize" >
+                <size>
+                  <width>46</width>
+                  <height>18</height>
+                </size>
+              </property>
+              <property name="minimum" >
+                <number>-20</number>
+              </property>
+              <property name="maximum" >
+                <number>120</number>
+              </property>
+              <property name="value" >
+                <number>80</number>
+              </property>
+              <property name="alignment" >
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+            </widget>
+          </item>
+
+        </layout>
+
+        <!--&&&-->
+      </widget>
+        </widget>
+      </item>
+
+    </layout>
+  </widget>
+  <customwidgets>
+    <customwidget>
+      <class>SettingsWidget</class>
+      <extends>QWidget</extends>
+      <header>settingswidget.h</header>
+      <container>1</container>
+      <slots>
+        <slot>setOption(int)</slot>
+        <slot>setOption(QString)</slot>
+        <slot>setOption(bool)</slot>
+        <slot>buttonClick()</slot>
+      </slots>
+    </customwidget>
+  </customwidgets>
+  <tabstops>
+    <tabstop>bez_enabled_check</tabstop>
+  </tabstops>
+  <resources/>
+
+
+  <connections>
+    <connection>
+      <sender>bez_enabled_check</sender>
+      <signal>toggled(bool)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(bool)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_Early_check</sender>
+      <signal>toggled(bool)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(bool)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_HCL_check</sender>
+      <signal>toggled(bool)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(bool)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_opacity_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_opacity_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>      
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_saturation_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_saturation_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_lighten_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_lighten_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_lightengamma_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_lightengamma_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>      
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_midi_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_midi_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_sigcontrast_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_sigcontrast_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_sigmiddle_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_sigmiddle_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_shadows_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_shadows_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_lowmids_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_lowmids_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_greys_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_greys_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_highmids_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_highmids_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_highlights_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_highlights_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_shadows4_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_shadows4_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_lowmids4_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_lowmids4_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_highmids4_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_highmids4_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_highlights4_slider</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>bez_highlights4_edit</sender>
+      <signal>valueChanged(int)</signal>
+      <receiver>Bez_ferd</receiver>
+      <slot>setOption(int)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>20</x>
+          <y>20</y>
+        </hint>
+      </hints>
+    </connection>
+  </connections>
+  <slots>
+    <slot>setOption(QString)</slot>
+    <slot>setOption(int)</slot>
+    <slot>setOption(bool)</slot>
+    <slot>buttonClick()</slot>
+  </slots>
+</ui>

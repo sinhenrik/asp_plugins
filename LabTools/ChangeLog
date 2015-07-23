@@ -1,0 +1,21 @@
+0.6
+- added code to register the "group name" in the registry (Andrew Johnston)
+- renamed plugin to LabTools because it does slightly more than contrast enhancement
+- use a faster cubic root function for RGB <-> LAB conversion
+
+0.5
+- added a saturation control, that increases / decreases the saturation by modifying the Lab a and b channels 
+
+0.4
+- replaced the standard cubic root routine with a faster one
+
+0.3
+- Fixed a bug in RGB <-> LAB conversion that caused color spots to appear on the image
+- Improved RGB <-> LAB conversion precision and speed
+
+0.2
+- Plugin now operates on the Lab L channel instead of the HSL L channel
+
+0.1
+- Initial version
+

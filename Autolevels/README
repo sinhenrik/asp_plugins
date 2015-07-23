@@ -1,0 +1,19 @@
+AutoLevels 0.3
+Copyright (C) 2012 Roland Baudin <roland65@free.fr>
+License : GPL
+
+This simple plugin implements the auto levels function.
+The image histogram is stretched so that a percentage (Black control) of the image is pure black and a percentage
+(White control) of the image is pure white.
+This is the same function as the builtin AutoLevel, but placed later in the filter stack.
+
+Linux
+	To build the plugin under Linux, use the included build.sh shell script.
+
+Windows
+	To create the Visual Studio project, use the included winproj.bat command file.
+
+Mac OS X
+	To create the Xcode 3.2 project, use the included macproj.sh script.
+	To fix the Qt paths after building, use the include fixpaths.sh shell script.
+

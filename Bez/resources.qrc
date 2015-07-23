@@ -1,0 +1,19 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+	<qresource>
+		<file>img/slider_gray.png</file>
+		<file>img/slider_gray2.png</file>
+		<file>img/slider_sharpening.png</file>
+		<file>img/slider_contrast.png</file>
+		<file>img/slider_saturation.png</file>
+		<file>img/slider_5-1.png</file>
+		<file>img/slider_5-2.png</file>
+		<file>img/slider_5-3.png</file>
+		<file>img/slider_5-4.png</file>
+		<file>img/slider_5-5.png</file>
+		<file>img/slider_4-1.png</file>
+		<file>img/slider_4-2.png</file>
+		<file>img/slider_4-3.png</file>
+		<file>img/slider_4-4.png</file>
+  	</qresource>
+</RCC>

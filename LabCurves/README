@@ -1,0 +1,26 @@
+LabCurves 0.1
+Copyright (C) 2012 Roland Baudin <roland65@free.fr>
+License: GPL
+
+This plugin allows to modify curves in Lab space. When the plugin is enabled, the RGB curves that are displayed
+in the Curves tool become indeed Lab curves.
+
+Thus, red curve becomes L, green curve becomes a and blue curve becomes b. Then, adjusting the curves with the mouse
+allows to fully correct the image in Lab space.
+
+Because the a and b histograms are very narrow, a scale factor allows to expand the histograms of a and b,
+and makes curve manipulation of these channels easier, but at the price of color clipping.
+
+This plugin is based on the former LabCurves plugin, created for Bibble by Thomas Baruchel.
+
+
+Linux
+	To build the plugin under Linux, use the included build.sh shell script.
+
+Windows
+	To create the Visual Studio project, use the included winproj.bat command file.
+
+Mac OS X
+	To create the Xcode 3.2 project, use the included macproj.sh script.
+	To fix the Qt paths after building, use the include fixpaths.sh shell script.
+

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AutoLevelsForm</class>
+ <widget class="SettingsWidget" name="AutoLevelsForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>437</width>
+    <height>67</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">AutoLevels</string>
+  </property>
+  <property name="BIBBLE_PLUGIN_NAME" stdset="0">
+   <string notr="true">AutoLevels</string>
+  </property>
+  <property name="BIBBLE_PLUGIN_GROUP" stdset="0">
+   <string notr="true">AutoLevels</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QCheckBox" name="enable_checkbox">
+     <property name="text">
+      <string>Enable</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QDoubleSpinBox" name="minlevel_edit">
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.001000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.100000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QDoubleSpinBox" name="maxlevel_edit">
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.001000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.100000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QPushButton" name="reset_button">
+     <property name="maximumSize">
+      <size>
+       <width>40</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Disable filter and reset parameter values</string>
+     </property>
+     <property name="text">
+      <string notr="true">0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QPushButton" name="about_button">
+     <property name="maximumSize">
+      <size>
+       <width>40</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Display infos about the plugin</string>
+     </property>
+     <property name="text">
+      <string notr="true">?</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="black_label">
+     <property name="text">
+      <string>Black</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="white_label">
+     <property name="text">
+      <string>White</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SettingsWidget</class>
+   <extends>QWidget</extends>
+   <header>SettingsWidget.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setOption(int)</slot>
+    <slot>setOption(QString)</slot>
+    <slot>setOption(bool)</slot>
+    <slot>buttonClick()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>enable_checkbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>AutoLevelsForm</receiver>
+   <slot>setOption(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>131</x>
+     <y>17</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minlevel_edit</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>AutoLevelsForm</receiver>
+   <slot>setOption(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>169</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>maxlevel_edit</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>AutoLevelsForm</receiver>
+   <slot>setOption(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

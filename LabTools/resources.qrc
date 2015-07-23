@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+	<qresource>
+		<file>images/slider_lightness.png</file>
+		<file>images/slider_contrast.png</file>
+		<file>images/slider_saturation.png</file>
+  	</qresource>
+</RCC>

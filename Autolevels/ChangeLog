@@ -1,0 +1,12 @@
+0.3
+- added code to register the "group name" in the registry (Andrew Johnston)
+
+0.2
+- Fixed the group name
+- Changed the way the histogram transformation is computed. Apparently, the histogram displayed in ASP is computed
+  in SRGB space. So I changed the computations to make the computed histogram match the displayed histogram. An then,
+  the histogram transformation is computed from there.
+
+0.1
+- Initial version
+

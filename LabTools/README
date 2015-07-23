@@ -1,0 +1,25 @@
+LabTools 0.6
+Copyright (C) 2012 Roland Baudin <roland65@free.fr>
+License: GPL
+
+This plugin allows to increase or decrease the image contrast and lightness by applying an S-shape curve to the Lab L channel.
+It also allows to increase or decrease the saturation level by modifying the slope of the Lab a and b channels.
+
+The plugin effect is controlled using three parameters:
+- Contrast: increase or decrease the image contrast
+- Lightness: increase or decrease the image lightness
+- Saturation: increase or decrease the image saturation
+
+Note that, due to the nonlinear transformation used, the lightness effect depends on the contrast level value.
+
+
+Linux
+	To build the plugin under Linux, use the included build.sh shell script.
+
+Windows
+	To create the Visual Studio project, use the included winproj.bat command file.
+
+Mac OS X
+	To create the Xcode 3.2 project, use the included macproj.sh script.
+	To fix the Qt paths after building, use the include fixpaths.sh shell script.
+
